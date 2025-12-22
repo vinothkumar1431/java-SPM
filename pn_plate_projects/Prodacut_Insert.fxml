@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchor_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="980.0" prefWidth="1920.0" stylesheets="@Prodacut_Insert.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="anchor_pane1" layoutX="48.0" layoutY="176.0" prefHeight="754.0" prefWidth="470.0" stylesheets="@Prodacut_Insert.css" />
+      <TableView layoutX="573.0" layoutY="177.0" prefHeight="754.0" prefWidth="923.0">
+        <columns>
+          <TableColumn prefWidth="162.39996337890625" text="Prodacut Name" />
+          <TableColumn prefWidth="286.39990234375" text="Prodacut Modal" />
+            <TableColumn prefWidth="206.4000244140625" text="Prodacut Size" />
+            <TableColumn prefWidth="134.39990234375" text="Price" />
+            <TableColumn prefWidth="130.4000244140625" text="Stock" />
+        </columns>
+      </TableView>
+      <MenuBar layoutY="-2.0" prefHeight="30.0" prefWidth="1920.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="My Prodacuts" />
+              <MenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Documents" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

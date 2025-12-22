@@ -1,0 +1,134 @@
+/* ================= ROOT ================= */
+.root {
+    -fx-background-color: #F5F7FA;
+    -fx-font-family: "Segoe UI";
+}
+
+/* ================= TOP HEADER ================= */
+#anchor_top {
+    -fx-background-color: linear-gradient(to right, #0D47A1, #1976D2);
+    -fx-border-color: #0D47A1;
+    -fx-font-size: 20px;
+
+}
+
+/* ================= TITLE ================= */
+#lbl_title {
+    -fx-font-size: 80px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* ================= MAIN CONTAINER ================= */
+#anchor_pane {
+    -fx-background-color: #F5F7FA;
+}
+
+/* ================= CENTER AREA ================= */
+#anchor_senter {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #BBDEFB;
+    -fx-border-radius: 5;
+}
+
+/* ================= RIGHT PANEL ================= */
+#anchor_right {
+    -fx-background-color: #E3F2FD;
+    -fx-border-color: #90CAF9;
+}
+
+
+/* ================= TEXT FIELD ================= */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #90CAF9;
+    -fx-border-radius: 4;
+}
+
+/* ================= COMBO BOX ================= */
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #90CAF9;
+}
+
+/* ================= TABLE ================= */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #BBDEFB;
+}
+
+/* Table Header */
+.table-view .column-header {
+    -fx-background-color: #1976D2;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Table Row */
+.table-row-cell {
+    -fx-background-color: white;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #F1F8FF;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #BBDEFB;
+}
+
+/* ================= TABLE COLUMNS ================= */
+#table_name,
+#table_prodact,
+#table_platesize,
+#table_quntity,
+#table_price,
+#table_discount,
+#table_amount {
+    -fx-border-color: #BBDEFB;
+}
+
+/* ================= BUTTON COMMON ================= */
+.button {
+    -fx-font-size: 14px;
+    -fx-background-radius: 6;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+/* ================= BUTTON COLORS ================= */
+#bt_add {
+    -fx-background-color: #2E7D32;
+}
+
+#bt_save {
+    -fx-background-color: #1565C0;
+}
+
+#bt_pay {
+    -fx-background-color: #EF6C00;
+}
+
+#bt_receipt {
+    -fx-background-color: #455A64;
+}
+
+#bt_close {
+    -fx-background-color: #D32F2F;
+}
+
+/* ================= HOVER EFFECT ================= */
+.button:hover {
+    -fx-opacity: 0.9;
+}
+
+/* ================= FOOTER / TOTAL AREA ================= */
+#lbl_total,
+#lbl_balance {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0D47A1;
+}

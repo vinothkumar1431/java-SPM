@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="scrollpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="2400.0" prefWidth="1926.0" stylesheets="@Intro.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pn_plate_projects.IntroController">
+  <content>
+    <AnchorPane fx:id="A_pane" minHeight="0.0" minWidth="0.0" prefHeight="2435.0" prefWidth="1926.0">
+         <children>
+            <ImageView fx:id="logoimage" fitHeight="454.0" fitWidth="1987.0" layoutX="-43.0" pickOnBounds="true" AnchorPane.bottomAnchor="1946.0" AnchorPane.leftAnchor="-43.0" AnchorPane.rightAnchor="-17.59999999999991" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../image/WhatsApp_Image_2025-09-28_at_12.53.17_31a8e102-removebg-preview%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="148.0" layoutY="1517.0" prefHeight="18.0" prefWidth="137.0" text="12inch Round plate">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="1848.0" prefHeight="18.0" prefWidth="70.0" text="price₹5">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="bt_id3R" layoutX="114.0" layoutY="1479.0" mnemonicParsing="false" onAction="#id3R" prefHeight="26.0" prefWidth="204.0" text="Add+" />
+            <ImageView fitHeight="190.0" fitWidth="200.0" layoutX="121.0" layoutY="1601.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/images-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="192.0" fitWidth="200.0" layoutX="111.0" layoutY="1287.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/images__1_-removebg-preview%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="127.0" layoutY="1830.0" prefHeight="18.0" prefWidth="179.0" text="12inch Round pizza plate">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="537.0" layoutY="1848.0" prefHeight="18.0" prefWidth="70.0" text="price₹6.50">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="bt_id4Rp" layoutX="119.0" layoutY="1791.0" mnemonicParsing="false" onAction="#id4_Rp" prefHeight="26.0" prefWidth="194.0" text="Add+" />
+            <ImageView fitHeight="201.0" fitWidth="200.0" layoutX="117.0" layoutY="631.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/product-jpeg-250x250-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="bt_id1Ps" layoutX="115.0" layoutY="830.0" mnemonicParsing="false" onAction="#id1Ps" prefHeight="26.0" prefWidth="204.0" text="Add+" />
+            <Label layoutX="111.0" layoutY="871.0" prefHeight="18.0" prefWidth="210.0" text="12inch Plain super round plate">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="181.0" layoutY="889.0" prefHeight="23.0" prefWidth="84.0" text="price₹10.20">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="385.0" layoutY="914.0" prefHeight="18.0" prefWidth="137.0">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="193.0" fitWidth="198.0" layoutX="120.0" layoutY="965.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/images__2_-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="bt_di2pr" layoutX="114.0" layoutY="1158.0" mnemonicParsing="false" onAction="#id2Pr" prefHeight="26.0" prefWidth="204.0" text="Add+" />
+            <Label layoutX="111.0" layoutY="1193.0" prefHeight="18.0" prefWidth="210.0" text="12inch Plain super pizza plate">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="182.0" layoutY="1211.0" prefHeight="18.0" prefWidth="70.0" text="price₹9">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="202.0" fitWidth="196.0" layoutX="474.0" layoutY="628.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/61b+vQYl9qL._AC_UL600_SR600_600_-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="193.0" fitWidth="193.0" layoutX="473.0" layoutY="965.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/71pjaz6c5cl-sl1500--500x500-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="190.0" fitWidth="210.0" layoutX="467.0" layoutY="1288.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/download__2_-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="191.0" fitWidth="203.0" layoutX="470.0" layoutY="1601.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/areca-leaf-plate-1690016962-6994666-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="bt_id5" layoutX="474.0" layoutY="831.0" mnemonicParsing="false" onAction="#id5" prefHeight="26.0" prefWidth="198.0" text="Add+" />
+            <Button fx:id="bt_id6" layoutX="472.0" layoutY="1158.0" mnemonicParsing="false" onAction="#id6" prefHeight="26.0" prefWidth="200.0" text="Add+" />
+            <Button fx:id="bt_id8" layoutX="470.0" layoutY="1791.0" mnemonicParsing="false" onAction="#id8" prefHeight="26.0" prefWidth="202.0" text="Add+" />
+            <Button fx:id="bt_id7" layoutX="470.0" layoutY="1479.0" mnemonicParsing="false" onAction="#id7" prefHeight="26.0" prefWidth="210.0" text="Add+" />
+            <Label layoutX="500.0" layoutY="1830.0" prefHeight="18.0" prefWidth="149.0" text="12*3 cp Round  plate">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="501.0" layoutY="1517.0" prefHeight="18.0" prefWidth="147.0" text="12*4 cp Round  plate">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="200.0" fitWidth="212.0" layoutX="859.0" layoutY="631.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/images__4_-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="190.0" fitWidth="208.0" layoutX="857.0" layoutY="1601.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/6inch-areca-leaf-plate-500x500-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="193.0" fitWidth="203.0" layoutX="859.0" layoutY="1288.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/images__5_-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="193.0" fitWidth="204.0" layoutX="857.0" layoutY="965.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/images__3_-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="bt_id9" layoutX="858.0" layoutY="830.0" mnemonicParsing="false" onAction="#id9" prefHeight="26.0" prefWidth="213.0" text="Add+" />
+            <Button fx:id="bt_id12" layoutX="857.0" layoutY="1791.0" mnemonicParsing="false" onAction="#id12" prefHeight="26.0" prefWidth="208.0" text="Add+" />
+            <Button fx:id="bt_id11" layoutX="858.0" layoutY="1479.0" mnemonicParsing="false" onAction="#id11" prefHeight="26.0" prefWidth="207.0" text="Add+" />
+            <Button fx:id="bt_id10" layoutX="858.0" layoutY="1158.0" mnemonicParsing="false" onAction="#id10" prefHeight="26.0" prefWidth="207.0" text="Add+" />
+            <ImageView fitHeight="199.0" fitWidth="214.0" layoutX="1250.0" layoutY="631.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/4-inch-areca-leaf-bowl.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="202.0" layoutX="1633.0" layoutY="629.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/51SppfnQPeL._SX679_-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="193.0" fitWidth="205.0" layoutX="1255.0" layoutY="965.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/disposable-areca-leaf-bowl-500x500-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="187.0" fitWidth="203.0" layoutX="1256.0" layoutY="1603.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/valarbio-bio-degradabe-areca-cup-500x500-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="191.0" fitWidth="204.0" layoutX="1256.0" layoutY="1287.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/4-inch-square-areca-leaf-cup-250x250-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="bt_id16" layoutX="1256.0" layoutY="1791.0" mnemonicParsing="false" onAction="#id16" prefHeight="26.0" prefWidth="202.0" text="Add+" />
+            <Button fx:id="bt_id15" layoutX="1254.0" layoutY="1479.0" mnemonicParsing="false" onAction="#id15" prefHeight="26.0" prefWidth="206.0" text="Add+" />
+            <Button fx:id="bt_id14" layoutX="1256.0" layoutY="1158.0" mnemonicParsing="false" onAction="#id14" prefHeight="26.0" prefWidth="207.0" text="Add+" />
+            <Button fx:id="bt_id13" layoutX="1252.0" layoutY="830.0" mnemonicParsing="false" onAction="#id13" prefHeight="26.0" prefWidth="215.0" text="Add+" />
+            <Button fx:id="bt_id17" layoutX="1632.0" layoutY="831.0" mnemonicParsing="false" onAction="#id17" prefHeight="26.0" prefWidth="205.0" text="Add+" />
+            <ImageView fitHeight="194.0" fitWidth="202.0" layoutX="1634.0" layoutY="965.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/areca-palm-leaf-cup-250x250-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="192.0" fitWidth="200.0" layoutX="1634.0" layoutY="1287.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/areca-leaf-disposable-cups-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="190.0" fitWidth="201.0" layoutX="1634.0" layoutY="1601.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/1561977731_p_4979222_955867-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="bt_id18" layoutX="1636.0" layoutY="1158.0" mnemonicParsing="false" onAction="#id18" prefHeight="26.0" prefWidth="198.0" text="Add+" />
+            <Button fx:id="bt_id19" layoutX="1634.0" layoutY="1479.0" mnemonicParsing="false" onAction="#id19" prefHeight="26.0" prefWidth="200.0" text="Add+" />
+            <Button fx:id="bt_id20" layoutX="1633.0" layoutY="1791.0" mnemonicParsing="false" onAction="#id20" prefHeight="26.0" prefWidth="204.0" text="Add+" />
+            <Label layoutX="1687.0" layoutY="1517.0" prefHeight="18.0" prefWidth="95.0" text="110ML Glass">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1700.0" layoutY="1535.0" prefHeight="18.0" prefWidth="70.0" text="price₹2.50">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1647.0" layoutY="1830.0" prefHeight="18.0" prefWidth="173.0" text="Spoon(14cms &amp; 16 cms  )">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1335.0" layoutY="1211.0" prefHeight="18.0" prefWidth="58.0" text="price₹2">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1678.0" layoutY="1193.0" prefHeight="18.0" prefWidth="110.0" text="120ML Tea cup">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1700.0" layoutY="1211.0" prefHeight="18.0" prefWidth="70.0" text="price₹1.50">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1680.0" layoutY="871.0" prefHeight="18.0" prefWidth="110.0" text="55ML Tea cup">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1711.0" layoutY="891.0" prefHeight="18.0" prefWidth="58.0" text="price₹1">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="1535.0" prefHeight="18.0" prefWidth="70.0" text="price₹5.20">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="539.0" layoutY="1535.0" prefHeight="18.0" prefWidth="70.0" text="price₹6.80">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="481.0" layoutY="871.0" prefHeight="18.0" prefWidth="182.0" text="12*4 cp Plain super  plate">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="467.0" layoutY="1193.0" prefHeight="18.0" prefWidth="210.0" text="12inch Plain super pizza plate">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1323.0" layoutY="871.0" prefHeight="18.0" prefWidth="76.0" text="4inch Bowl">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="856.0" layoutY="1193.0" prefHeight="18.0" prefWidth="210.0" text="10inch Plain super pizza plate">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="876.0" layoutY="871.0" prefHeight="18.0" prefWidth="183.0" text="10inch Plain super  plate">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="929.0" layoutY="1517.0" prefHeight="18.0" prefWidth="78.0" text="8inch plate">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="933.0" layoutY="1845.0" prefHeight="23.0" prefWidth="70.0" text="price₹4">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="933.0" layoutY="1532.0" prefHeight="23.0" prefWidth="70.0" text="price₹4.50">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="933.0" layoutY="1208.0" prefHeight="23.0" prefWidth="70.0" text="price₹6.10">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="540.0" layoutY="1208.0" prefHeight="23.0" prefWidth="70.0" text="price₹11">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="932.0" layoutY="889.0" prefHeight="23.0" prefWidth="70.0" text="price₹6">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="534.0" layoutY="889.0" prefHeight="23.0" prefWidth="70.0" text="price₹12">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="926.0" layoutY="1830.0" prefHeight="18.0" prefWidth="78.0" text="6inch plate">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1289.0" layoutY="1517.0" prefHeight="18.0" prefWidth="134.0" text="4inch Square bowl">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1306.0" layoutY="1830.0" prefHeight="18.0" prefWidth="101.0" text=" 180 ML Bowl">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1312.0" layoutY="1193.0" prefHeight="18.0" prefWidth="89.0" text="210ML Bowl">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1716.0" layoutY="1858.0" prefHeight="18.0" prefWidth="58.0" text="price₹2">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1651.0" layoutY="1857.0" prefHeight="18.0" prefWidth="58.0" text="price₹2">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1327.0" layoutY="1535.0" prefHeight="18.0" prefWidth="74.0" text="price₹2.80">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1327.0" layoutY="1848.0" prefHeight="18.0" prefWidth="58.0" text="price₹2">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1330.0" layoutY="891.0" prefHeight="18.0" prefWidth="58.0" text="price₹3">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="110.0" layoutY="1939.0" prefHeight="356.0" prefWidth="1698.0" />
+            <Label id="label_view" fx:id="label_view" layoutX="594.0" layoutY="478.0" prefHeight="111.0" prefWidth="666.0" text="View Our Menu">
+               <font>
+                  <Font name="Baskerville Old Face" size="77.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@Intro.css" />
+                  <URL value="@Intro.css" />
+               </stylesheets>
+            </Label>
+         </children>
+         <stylesheets>
+            <URL value="@Intro.css" />
+            <URL value="@Intro.css" />
+         </stylesheets></AnchorPane>
+  </content>
+</ScrollPane>

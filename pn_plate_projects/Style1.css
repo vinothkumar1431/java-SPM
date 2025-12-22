@@ -1,0 +1,107 @@
+/* Username.css */
+
+/* AnchorPane background */
+.anchor-pane {
+    -fx-background-color: linear-gradient(to bottom right, #FFA07A, #FFDEAD);
+}
+
+/* Main title label */
+#User_id {
+    -fx-font-size: 70px;
+    -fx-font-family: "Book Antiqua";
+    -fx-text-fill: #8e0000; /* dark gray text */
+}
+#login_id {
+    -fx-font-size: 70px;
+    -fx-font-family: "Algerian";
+    -fx-text-fill: #944bb1/*#2E2E2E; dark gray text */
+}
+#sign_lable {
+    -fx-font-size: 30px;
+    -fx-font-family: "Book Antiqua";
+    -fx-text-fill: #ff0000/*#2E2E2E; dark gray text */
+}
+
+/* All form labels */
+.label {
+    -fx-font-size: 40px;
+    -fx-font-family: "Bookman Old Style";
+    -fx-text-fill: #333333;
+}
+
+/* TextFields */
+.text-field {
+    -fx-pref-height: 60px;
+    -fx-pref-width: 500px;
+    -fx-font-size: 20px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #A9A9A9;
+    -fx-border-width: 2px;
+    -fx-padding: 0 10px;
+    -fx-focus-color: #FF8C00; /* orange focus */
+    -fx-faint-focus-color: transparent;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #FF8C00, #FF6347);
+    -fx-text-fill: white;
+    -fx-font-size: 25px;
+    -fx-font-family: "Arial Bold";
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-cursor: hand;
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFA500, #FF4500);
+}
+
+/* Button pressed effect */
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #FF4500, #FF8C00);
+}
+
+/* Optional: TextField focus glow */
+.text-field:focused {
+    -fx-border-color: #FF8C00;
+    -fx-border-width: 2.5px;
+}
+/* 🔷 Alert Dialog (Error Box) style */
+.dialog-pane {
+    -fx-background-color: #ffebee; /* light red background */
+    -fx-border-color: #d32f2f;     /* dark red border */
+    -fx-border-width: 2px;
+    -fx-font-family: "Latha";      /* Tamil font */
+    -fx-font-size: 16px;
+}
+
+/* 🔹 Alert title text */
+.dialog-pane .header-panel .label {
+    -fx-text-fill: #b71c1c; /* red title text */
+    -fx-font-weight: bold;
+}
+
+/* 🔹 Alert content text (message body) */
+.dialog-pane .content.label {
+    -fx-text-fill: #000000; /* black text */
+}
+
+/* 🔹 OK button style inside alert */
+.dialog-pane .button {
+    -fx-background-color: #0066cc;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-font-family: "Latha";
+}
+
+.dialog-pane .button:hover {
+   -fx-background-color: #004c99;
+}
+
+
+
+

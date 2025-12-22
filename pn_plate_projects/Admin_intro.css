@@ -1,0 +1,26 @@
+#anchor_pan1{
+	
+-fx-background-color:red;
+
+}
+#anchor_top_pane{
+	
+	-fx-background-color:lawngreen;
+}
+#piechart_1{
+    
+    -fx-background-color:lavender;
+}
+#anchor_pane{
+        -fx-background-color:#5a3375;
+
+}
+#anchor_batom{
+            -fx-background-color:#0D47A1;
+
+    
+}
+#usear_icon{
+	
+	-fx-size:10px;
+}

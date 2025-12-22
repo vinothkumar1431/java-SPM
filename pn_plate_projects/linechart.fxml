@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450" prefWidth="700"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pn_plate_projects.LinechartController">
+
+    <LineChart fx:id="lineChart"
+               AnchorPane.topAnchor="20"
+               AnchorPane.leftAnchor="20"
+               AnchorPane.rightAnchor="20"
+               AnchorPane.bottomAnchor="20"
+               title="Monthly Sales Report">
+
+        <xAxis>
+            <CategoryAxis fx:id="xAxis" label="Month"/>
+        </xAxis>
+
+        <yAxis>
+            <NumberAxis fx:id="yAxis" label="Sales Amount"/>
+        </yAxis>
+
+    </LineChart>
+
+</AnchorPane>

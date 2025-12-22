@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor_pane" prefHeight="980.0" prefWidth="1920.0" stylesheets="@Admin_intro.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pn_plate_projects.Admin_intro_pageController">
+
+   <children>
+
+      <!-- TOP PANE -->
+      <AnchorPane id="anchor_top_pane" fx:id="anchor_top_pane" layoutX="344.0" layoutY="59.0" prefHeight="428.0" prefWidth="1582.0" stylesheets="@Admin_intro.css">
+         <children>
+            <PieChart fx:id="piechart_1" layoutX="23.0" layoutY="22.0" prefHeight="384.0" prefWidth="411.0" />
+           <BarChart fx:id="Bar_chart" layoutX="970.0" layoutY="22.0" prefHeight="384.0" prefWidth="612.0">
+    <xAxis>
+        <CategoryAxis fx:id="bar_xAxis" label="Prodacut" />
+    </xAxis>
+    <yAxis>
+        <NumberAxis fx:id="bar_yAxis" label="Quntity" />
+    </yAxis>
+</BarChart>
+
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchor_batom" layoutX="345.0" layoutY="515.0" prefHeight="466.0" prefWidth="1587.0">
+         <children>
+      
+               <LineChart fx:id="lineChart" layoutX="409.0" layoutY="-5.6" prefHeight="478.0" prefWidth="1179.0" title="Monthly Sales Report" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="409.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-6.0">
+
+        <xAxis>
+            <CategoryAxis label="Month" fx:id="xAxis" />
+        </xAxis>
+
+        <yAxis>
+            <NumberAxis fx:id="yAxis" label="Sales Amount" />
+        </yAxis>
+
+    </LineChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchor_pan1" layoutX="14.0" layoutY="59.0" prefHeight="898.0" prefWidth="300.0" stylesheets="@Admin_intro.css">
+         <children>
+            <Label layoutX="108.0" layoutY="24.0" text="Admin">
+               <font>
+                  <Font name="Baskerville Old Face" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="97.0" text="Admin Name" />
+            <FontAwesomeIcon caretBias="false" glyphName="USER" layoutX="53.0" layoutY="56.0" selectionEnd="0" size="3em" wrappingWidth="45.2999963760376" />
+         </children></AnchorPane>
+      <MenuBar fx:id="menu_bar" nodeOrientation="LEFT_TO_RIGHT" prefHeight="46.0" prefWidth="1926.0" useSystemMenuBar="true">
+        <menus>
+          <Menu mnemonicParsing="false">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+        </menus>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </MenuBar>
+
+    </children>
+</AnchorPane>

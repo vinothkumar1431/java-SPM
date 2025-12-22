@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane prefWidth="1200" prefHeight="700"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@dashboard.css">
+
+    <!-- ================= TOP BAR ================= -->
+    <top>
+        <HBox spacing="15" alignment="CENTER_LEFT" styleClass="top-bar">
+            <Label text="DASHBOARD" styleClass="top-title"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button text="Add"/>
+            <Button text="More"/>
+            <Label text="🔔"/>
+            <Label text="Admin"/>
+        </HBox>
+    </top>
+
+    <!-- ================= LEFT SIDEBAR ================= -->
+    <left>
+        <VBox spacing="10" styleClass="side-bar">
+            <Label text="LOGO" styleClass="logo"/>
+            <Separator/>
+
+            <Button text="Dashboard" styleClass="side-btn"/>
+            <Button text="Orders" styleClass="side-btn"/>
+            <Button text="Products" styleClass="side-btn"/>
+            <Button text="Customers" styleClass="side-btn"/>
+            <Button text="Reports" styleClass="side-btn"/>
+            <Button text="Settings" styleClass="side-btn"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+            <Label text="05:14 PM" styleClass="clock"/>
+        </VBox>
+    </left>
+
+    <!-- ================= CENTER ================= -->
+    <center>
+        <VBox spacing="15" padding="15">
+
+            <!-- ===== SUMMARY CARDS ===== -->
+            <HBox spacing="15">
+                <Pane styleClass="card" HBox.hgrow="ALWAYS"/>
+                <Pane styleClass="card" HBox.hgrow="ALWAYS"/>
+                <Pane styleClass="card" HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <!-- ===== CHART AREA ===== -->
+            <HBox spacing="15">
+                <Pane styleClass="chart" HBox.hgrow="ALWAYS"/>
+                <Pane styleClass="chart" HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <!-- ===== TABLE VIEW ===== -->
+            <TableView prefHeight="250">
+
+                <columns>
+                    <!-- CheckBox Column -->
+                    <TableColumn text="✔" prefWidth="50"/>
+
+                    <TableColumn text="Product ID" prefWidth="120"/>
+                    <TableColumn text="Product Name" prefWidth="200"/>
+                    <TableColumn text="Price" prefWidth="120"/>
+                    <TableColumn text="Stock" prefWidth="120"/>
+                </columns>
+
+            </TableView>
+
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="980.0" prefWidth="1920.0" stylesheets="@Style1.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pn_plate_projects.PNController">
+   <children>
+      <ImageView fitHeight="1002.0" fitWidth="1987.0" layoutX="-67.0" pickOnBounds="true" AnchorPane.bottomAnchor="-22.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../image/Biodegradable%20Disposable%20Dinnerware_%20Eco-Friendly%20Options%20Explained.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="632.0" layoutY="280.0" prefHeight="50.0" prefWidth="220.0" stylesheets="@Style1.css" text="UserName" textFill="#ff21aef0">
+         <font>
+            <Font name="Bookman Old Style" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_uname" layoutX="1006.0" layoutY="273.0" onAction="#uname" prefHeight="48.0" prefWidth="391.0" stylesheets="@Style1.css" />
+      <Label layoutX="632.0" layoutY="381.0" prefHeight="50.0" prefWidth="201.0" text="Password">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="pwd_pass" layoutX="1003.0" layoutY="374.0" onAction="#pass" prefHeight="48.0" prefWidth="219.0" stylesheets="@Style1.css">
+         <font>
+            <Font name="System Bold" size="7.0" />
+         </font></PasswordField>
+      <Button fx:id="bt_log" layoutX="883.0" layoutY="523.0" mnemonicParsing="false" onAction="#log" prefHeight="46.0" prefWidth="106.0" stylesheets="@Style1.css" text="Login" />
+      <Label id="User_id" layoutX="402.0" layoutY="115.0" prefHeight="102.0" prefWidth="1327.0" stylesheets="@Style1.css" text="Please enter your login and passwor!" textFill="#8e0000">
+         <font>
+            <Font name="Book Antiqua" size="89.0" />
+         </font>
+      </Label>
+      <Label fx:id="sign_lable" layoutX="707.0" layoutY="669.0" prefHeight="33.0" prefWidth="286.0" text="Already a member ?" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="bt_Sign" layoutX="1013.0" layoutY="664.0" mnemonicParsing="false" onAction="#Sign" prefHeight="46.0" prefWidth="105.0" stylesheets="@Style1.css" text="Sign" />
+      <Label id="login_id" fx:id="login_id" layoutX="855.0" layoutY="35.0" prefHeight="79.0" prefWidth="210.0" stylesheets="@Style1.css" text="Login" textFill="#944bb1">
+         <font>
+            <Font name="Algerian" size="39.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

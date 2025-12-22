@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21 Oct, 2025, 7:03:14 PM
+    Author     : vinot
+*/
+.white-from{
+    
+    -fx-background-color: #fff;
+    -fx-background-radius: 8px;
+}
+
+broder{
+    -fx-border-color: linear-gradient(#9e20a0,#5a3375);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+}

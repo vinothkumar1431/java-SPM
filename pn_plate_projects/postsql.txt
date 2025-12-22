@@ -1,0 +1,355 @@
+
+
+create table items(id int primary key,item_name varchar not null,model varchar not null ,price DOUBLE PRECISION not null,image bytea not null )
+
+select * from items
+
+drop table items
+
+create table orders_items(id int unique not null,item_name varchar not null,quntity numeric not null ,order_date date not null,delivery_date date not null)
+
+create table pn_sign(f_name varchar not null,l_name varchar not null,email varchar not null,mob bigint unique not null)
+
+select *from pn_sign
+
+create table users_pass(username varchar not null,password varchar primary key,con_password varchar not null);
+
+select * from users_pass
+
+insert into users_pass values('vinoth','Vinoth@123','Vinoth@123')
+
+drop table pn_cpass
+
+select * from login
+
+drop table pn_sign
+
+select login.uname,login.pass,users_pass.username,users_pass.password from login inner join users_pass on login.uname=users_pass.username;
+
+select * from users_pass where username=? and password=?
+
+select username,password from users_pass  where  username='vinoth' and password='Vinoth@123'
+
+create table items(id int primary key,item_name varchar not null,model varchar not null ,price DOUBLE PRECISION not null,image bytea not null )
+
+select * from items
+
+drop table items
+
+create table orders_items(id int unique not null,item_name varchar not null,quntity numeric not null ,order_date date not null,delivery_date date not null)
+
+select * from orders_items;
+create table billing(
+                     product varchar not null,
+                     product_name varchar not null,
+					 product_size varchar not null,
+					 quntity int not null,
+					 price double precision not null,
+					 discount double precision  not null,
+					 amount double precision not null,
+					 today_date date default current_date,
+					 today_time time default current_time
+					 
+					)					 
+
+select * from billing 	
+
+insert into billing (product, product_name, product_size, quntity, price, discount, amount)
+values ('Plate', 'Plain Super Plate', '12Inch', 8, 50.00, 5.00, 350.00);
+
+
+drop table billing 
+
+
+
+  create table beyer(
+  product varchar not null,
+  product_name varchar not null,
+  product_size varchar not null,
+  quntity int not null,
+  price double precision not null,
+  discount double precision not null,
+  amount double precision not null
+
+)
+
+select * from beyer	
+
+drop table beyer
+
+
+
+
+
+create table plate_date(product text not null);
+
+             insert into plate_date values('Plate'),('Cups'),('Bowls'),('Container'),('Trays'),('Box'),('Spoon'),('Straws'),('Glass')
+
+			 					 
+select * from plate_date
+
+select price , discount from Items_plates where product = 'Plate' and product_name ='Plain Super Plate' and  product_size = '12Inch'
+
+drop table plate_date
+
+select price , discount from Items_plates where product ='Plate' and product_name = 'Plain Super Plate' and  product_size = '12Inch'
+
+create table Billing_table(table_name varchar not null unique);
+
+select *from Billing_table
+
+drop table Billing_table
+
+
+
+create table if not exists Bill_name(bill_names varchar unique)
+
+select * from Bill_name
+
+
+drop table Bill_name
+
+select * from Kum68
+
+create table admin_data(f_name varchar not null,l_name varchar not null,email varchar not null,mobile bigint not null,u_name varchar not null,pass varchar not null,c_pass varchar not null ,admin_id varchar  null);
+
+select * from admin_data;
+
+SELECT admin_id FROM admin_data ORDER BY admin_id DESC LIMIT 1;
+
+drop table admin_data;
+
+create table admin_login(U_name varchar not null,pass varchar not null,admin_id varchar not null,date varchar null);
+
+select *from admin_login;
+
+drop table admin_login;
+
+create table admin_id(id_name varchar not null);
+
+insert into admin_id values('dfhhuf-45'); 
+
+select * from admin_id;
+
+drop table admin_id;
+
+
+SELECT id_name FROM admin_id ORDER BY id_name DESC LIMIT 1;
+
+create table billing_items( );
+------------------------------------------//////*****(EMPLOYEE TABLE)*****//////-----------------------------------------------------------
+
+-----///  1-TABLE SIGN1 ///-------
+
+create table pn_sign(f_name varchar not null,l_name varchar not null,email varchar not null,mob bigint unique not null)
+
+select *from pn_sign
+
+drop table pn_sign
+
+
+-----///  2-TABLE SIGN1 ///-------
+
+create table users_pass(username varchar not null,password varchar primary key,con_password varchar not null);
+
+select * from users_pass
+
+insert into users_pass values('vinoth','Vinoth@123','Vinoth@123')
+
+drop table pn_cpass
+
+select * from login
+
+select login.uname,login.pass,users_pass.username,users_pass.password from login inner join users_pass on login.uname=users_pass.username;
+
+select * from users_pass where username=? and password=?
+
+select username,password from users_pass  where  username='vinoth' and password='Vinoth@123'
+
+------------------------------------------//////*****(PRODACUT TABLE)*****//////-----------------------------------------------------------
+
+-----///  1-TABLE PRODUCT ///-------
+
+create table Items_plates( product varchar ,
+                           product_name varchar not null,
+					       product_size varchar not null,
+					       price double precision not null,
+						   opening_stock bigint not null
+						  )
+insert into Items_plates values('Plate','Plain Super Plate','12Inch',8.00,1000),
+                               ('Plate','Plain Super pizza plate','12Inch',9.00,1000),
+                               ('Plate','Square plate','12Inch',7.50,1000),
+                               ('Plate','Round cup plate','12Inch',7.60,1000),
+                               ('Plate','Square cup plate','12Inch',8.10,1000),
+                               ('Plate','Round cup super plate','12Inch',8.60,1000),
+                               ('Plate','Square cup super plate','12Inch',8.60,1000),
+							   
+							   ('Plate','Plain Super Plate','12Inch XL',9.20,1000),
+                               ('Plate','Plain Super pizza plate','12Inch XL',9.80,1000),
+                               ('Plate','Square plate','12Inch XL',8.50,1000),
+                               ('Plate','Round cup plate','12Inch XL',9.40,1000),
+                               ('Plate','Square cup plate','12Inch XL',9.50,1000),
+                               ('Plate','Round cup super plate','12Inch XL',10.00,1000),
+                               ('Plate','Square cup super plate','12Inch XL',10.20,1000),
+
+							   ('Plate','Plain Super Plate','10Inch',7.00,1000),
+                               ('Plate','Plain Super pizza plate','10Inch',7.10,1000),
+                               ('Plate','Square plate','10Inch',6.50,1000),
+                               ('Plate','Round cup plate','10Inch',7.40,1000),
+                               ('Plate','Square cup plate','10Inch',7.60,1000),
+                               ('Plate','Round cup super plate','10Inch',7.80,1000),
+                               ('Plate','Square cup super plate','10Inch',7.90,1000),
+
+							   ('Plate','Plain Super Plate','9Inch',6.10,1000),
+                               ('Plate','Plain Super pizza plate','9Inch',6.40,1000),
+                               ('Plate','Square plate','9Inch',6.50,1000),
+                               ('Plate','Round cup plate','9Inch',6.55,1000),
+                               ('Plate','Square cup plate','9Inch',6.55,1000),
+                               ('Plate','Round cup super plate','9Inch',6.80,1000),
+                               ('Plate','Square cup super plate','9Inch',6.90,1000),
+
+							   ('Plate','Plain Super Plate','7Inch',5.50,1000),
+                               ('Plate','Plain Super pizza plate','7Inch',5.55,1000),
+                               ('Plate','Square plate','7Inch',5.60,1000),
+                               ('Plate','Round cup plate','7Inch',5.70,1000),
+                               ('Plate','Square cup plate','7Inch',5.80,1000),
+                               ('Plate','Round cup super plate','7Inch',5.95,1000),
+                               ('Plate','Square cup super plate','7Inch',6.00,1000),
+
+							   
+							   ('Plate','Plain Super Plate','6Inch',5.00,1000),
+                               ('Plate','Plain Super pizza plate','6Inch',5.10,1000),
+                               ('Plate','Square plate','6Inch',5.40,1000),
+                               ('Plate','Round cup plate','6Inch',5.50,1000),
+                               ('Plate','Square cup plate','6Inch',5.55,1000),
+                               ('Plate','Round cup super plate','6Inch',5.60,1000),
+                               ('Plate','Square cup super plate','6Inch',5.70,1000),
+
+							   
+							   ('Plate','Plain Super Plate','5Inch',4.50,1000),
+                               ('Plate','Plain Super pizza plate','5Inch',4.60,1000),
+                               ('Plate','Square plate','5Inch',4.65,1000),
+                               ('Plate','Round cup plate','5Inch',4.80,1000),
+                               ('Plate','Square cup plate','5Inch',4.85,1000),
+                               ('Plate','Round cup super plate','5Inch',4.90,1000),
+                               ('trays','Square cup super plate','5Inch',5.00,1000)
+					 
+					 
+					 
+select * from Items_plates
+
+drop table Items_plates
+
+
+-----///  2-TABLE BILL ID ///-------
+create table count_table  IF NOT EXISTS(count_number int unique)
+
+select * from count_table
+
+insert into count_table values (2),(3),(4),(5)
+
+select count_number from count_table order by count_number DESC limit 1;
+
+drop table count_table
+
+-----///  3-TABLE STOCK  ///-------
+
+create table stock_table( 
+                           date varchar not null, 
+						   time varchar not null,
+						   product_name varchar not null,
+                           model varchar not null,
+					       sizes varchar not null,
+					       price double precision not null,
+						   opening_stock bigint not null,
+						   product_selas int not null,
+						   balance_stock int not null
+						  )
+select * from stock_table
+
+drop table stock_table						  
+
+-----///  3-TABLE TOTAL COST & PROFIT ///-------
+
+ create table total_cost_and_profit(raw_material numeric not null,elasticity numeric not null,rent numeric not null,other );
+
+ 
+ select * from total_cost_and_profit
+
+drop table total_cost_and_profit
+
+-----///  4-TABLE  ///-------
+
+
+create table rr_table (
+
+    serial_number int not null,
+
+    bill_id int not null,
+
+    date varchar not null,
+    time varchar not null,
+
+    product_name varchar not null,
+    product_model varchar not null,
+    product_size varchar not null,
+
+    qut INT NOT NULL CHECK (qut > 0),
+
+    price numeric not null,
+    discount numeric not null,
+
+    amount numeric not null,
+	total numeric not null
+
+);
+select
+    date,
+    to_char(time::time, 'HH12 AM') as hour,
+    sum(total) as total_amount
+from rr_table
+where date = '2025-12-21'
+group by date, hour
+order by min(time::time);
+
+select
+   extract(hour from time::time) as total_amount
+from rr_table
+where date = '2025-12-19';
+select
+    sum(total) as total_amount
+from rr_table
+where date = '2025-12-19';
+
+
+
+
+                select * from rr_table;
+
+                drop table rr_table;
+
+				
+-----///  5-TABLE  ///-------
+
+create table bill_amounts (
+    bill_id int primary key references bills_id(bill_id)on delete cascade,
+
+    date varchar not null,
+    time varchar not null,
+
+    customer_name varchar(100),
+    customer_number varchar(15),
+
+    total numeric,
+    sub_total numeric,
+
+	paid_amount numeric,
+    balance_amount numeric,
+	
+    received numeric);
+
+	SELECT bill_id FROM bill_amounts ORDER BY bill_id DESC LIMIT 1
+
+                select * from bill_amounts;
+
+                drop table bill_amounts;1

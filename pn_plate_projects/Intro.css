@@ -1,0 +1,85 @@
+/* ==== ScrollPane Style ==== */
+.scroll-pane {
+ -fx-background: #f5f6fa;
+    -fx-border-color: #dcdde1;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+/* ==== AnchorPane Background ==== */
+#A_pane {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f0f2f5);
+}
+
+/* ==== Product Labels ==== */
+.label {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-text-fill: #2f3640;
+}
+
+/* Product Name */
+.label.product-name {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Product Price */
+.label.product-price {
+    -fx-font-size: 15px;
+    -fx-text-fill: #009432;
+    -fx-font-weight: bold;
+}
+
+/* ==== Add Button Style ==== */
+.button {
+    -fx-background-color: linear-gradient(to right, #4CAF50, #45a049);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #43A047, #66BB6A);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 6, 0, 0, 3);
+}
+
+.button:pressed {
+    -fx-background-color: #2e7d32;
+    -fx-effect: none;
+}
+
+/* ==== Image View (Product Image) ==== */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10, 0, 0, 2);
+    -fx-background-radius: 10px; 
+}
+
+/* ==== Section Titles ==== */
+.section-title {
+    -fx-font-size: 22px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-text-fill: #273c75;
+    -fx-font-weight: bold;
+}
+
+/* ==== Scrollbar Customization ==== */
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #95afc0;
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #718093;
+}
+
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+}
