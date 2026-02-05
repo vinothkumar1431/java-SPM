@@ -1,0 +1,55 @@
+/* ===== ROOT ===== */
+.anchor-pane {
+    -fx-background-color: transparent;
+}
+
+/* ===== COMMON BUTTON STYLE ===== */
+#secent_anchor {
+    -fx-background-color: rgba(255, 255, 255, 0.25); /* semi transparent */
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+
+    -fx-border-color: rgba(255, 255, 255, 0.4);
+    -fx-border-width: 1;
+
+    -fx-effect: dropshadow(gaussian,
+            rgba(0,0,0,0.25),
+            20, 0.3, 0, 4);
+
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+.button {
+    -fx-background-color: rgba(255, 255, 255, 0.85);
+    -fx-text-fill: #1f2937;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50;  
+    -fx-border-radius: 50;
+    -fx-border-color: #2563eb;
+    -fx-border-width: 2;
+    -fx-cursor: hand;
+}
+
+/* Hover effect */
+.button:hover {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+}
+
+/* Press effect */
+.button:pressed {
+    -fx-background-color: #1d4ed8;
+}
+
+/* ===== USER BUTTON ===== */
+#bt_user {
+    -fx-pref-width: 160;
+    -fx-pref-height: 55;
+}
+
+/* ===== ADMIN BUTTON ===== */
+#bt_admin {
+    -fx-pref-width: 160;
+    -fx-pref-height: 55;
+}
+

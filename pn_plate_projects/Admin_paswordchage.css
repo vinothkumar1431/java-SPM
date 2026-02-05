@@ -1,0 +1,57 @@
+/* ===== ROOT BACKGROUND ===== */
+.anchor-pane {
+    -fx-background-color: rgba(248, 250, 252, 0.65); /* 🔥 glass look */
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: rgba(255,255,255,0.4);
+    -fx-border-width: 1;
+    
+    /* Shadow for floating glass feel */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 20, 0.3, 0, 6);
+}
+
+
+
+/* ===== PAGE TITLE ===== */
+.label {
+    -fx-text-fill: #1f2937;
+}
+
+.label:first-child {
+    -fx-font-weight: bold;
+}
+
+/* ===== INPUT FIELDS ===== */
+.password-field,
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-size: 14px;
+    -fx-padding: 6 10;
+}
+
+/* Focus effect */
+.password-field:focused,
+.text-field:focused {
+    -fx-border-color: #2563eb;
+    -fx-border-width: 2;
+}
+
+/* ===== SAVE BUTTON ===== */
+#bt_save {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+#bt_save:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+#bt_save:pressed {
+    -fx-background-color: #1e40af;
+}

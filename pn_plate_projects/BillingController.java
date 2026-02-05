@@ -76,6 +76,7 @@ import javafx.stage.Stage;
 import javax.imageio.ImageIO;
 import java.text.DecimalFormat;
 import javafx.scene.Node;
+import javafx.scene.control.MenuButton;
 import static pn_plate_projects.PN_Main.stage;
 
 
@@ -109,174 +110,6 @@ public class BillingController implements Initializable {
     private TextField txt_customer;
     @FXML
     private TextField txt_contact;
-    @FXML
-    private SplitMenuButton view_product;
-    @FXML
-    private MenuItem menu_plate;
-    @FXML
-    private MenuItem menu_cup;
-    @FXML
-    private MenuItem menu_bowls;
-    @FXML
-    private MenuItem menu_container;
-    @FXML
-    private MenuItem menu_trays;
-    @FXML
-    private MenuItem menu_box;
-    @FXML
-    private MenuItem menu_spoon;
-    @FXML
-    private MenuItem menu_straws;
-    @FXML
-    private MenuItem menu_glass;
-    @FXML
-    private SplitMenuButton view_productname;
-    @FXML
-    private MenuItem menu_plainsuper;
-    @FXML
-    private MenuItem menu_plainpizza;
-    @FXML
-    private MenuItem menu_squareplain;
-    @FXML
-    private MenuItem menu_square;
-    @FXML
-    private MenuItem menu_roundcup;
-    @FXML
-    private MenuItem menu_squarecup;
-    @FXML
-    private MenuItem menu_roundcupsuper;
-    @FXML
-    private MenuItem menu_squarecupsuper;
-    @FXML
-    private MenuItem menu_classibio;
-    @FXML
-    private MenuItem menu_tea;
-    @FXML
-    private MenuItem menu_clamshell;
-    @FXML
-    private MenuItem menu_wooden;
-    @FXML
-    private MenuItem menu_round3cup;
-    @FXML
-    private MenuItem menu_square3cup;
-    @FXML
-    private MenuItem menu_square4cup;
-    @FXML
-    private MenuItem menu_round4cup;
-    @FXML
-    private MenuItem menu_roundplain3cup;
-    @FXML
-    private MenuItem menu_roundplain4cup;
-    @FXML
-    private MenuItem menu_squareplain3cup;
-    @FXML
-    private MenuItem menu_squareplain4cup;
-    @FXML
-    private MenuItem menu_lid;
-    @FXML
-    private MenuItem menu_3cup;
-    @FXML
-    private MenuItem menu_4cup;
-   @FXML 
-    private MenuItem menu_5cup;
-   @FXML 
-    private MenuItem menu_8cup;
-   @FXML 
-    private SplitMenuButton view_productsize;
-   @FXML 
-    private MenuItem menu_12inch;
-   @FXML 
-    private MenuItem menu_12inchxl;
-   @FXML 
-    private MenuItem menu_10inch;
-   @FXML 
-    private MenuItem menu_9inch;
-   @FXML 
-    private MenuItem menu_7inch;
-   @FXML 
-    private MenuItem menu_6inch;
-   @FXML 
-    private MenuItem menu_5inch;
-   @FXML 
-    private MenuItem menu_4inch;
-   @FXML 
-    private MenuItem menu_480ml;
-   @FXML 
-    private MenuItem menu_360ml;
-   @FXML 
-    private MenuItem menu_340ml;
-   @FXML 
-    private MenuItem menu_240ml;
-   @FXML 
-    private MenuItem menu_210ml;
-   @FXML 
-    private MenuItem menu_180ml;
-   @FXML 
-    private MenuItem menu_150ml;
-   @FXML 
-    private MenuItem menu_120ml;
-   @FXML 
-    private MenuItem menu_110ml;
-   @FXML 
-    private MenuItem menu_90ml;
-   @FXML 
-    private MenuItem menu_60ml;
-   @FXML 
-    private MenuItem menu_55ml;
-   @FXML 
-    private MenuItem menu_30ml;
-   @FXML 
-    private MenuItem menu_500ml;
-   @FXML 
-    private MenuItem menu_750ml;
-   @FXML 
-    private MenuItem menu_b2b;
-   @FXML 
-    private MenuItem menu_1d;
-   @FXML 
-    private MenuItem menu_2d;
-   @FXML 
-    private MenuItem menu_3d;
-   @FXML 
-    private MenuItem menu_5d;
-   @FXML 
-    private MenuItem menu_size66;
-   @FXML 
-    private MenuItem menu_size96;
-   @FXML 
-    private MenuItem menu_size99;
-   @FXML 
-    private MenuItem menu_size993;
-   @FXML 
-    private MenuItem menu_smart;
-   @FXML 
-    private MenuItem menu_300ml;
-   @FXML 
-    private MenuItem menu_size883;
-   @FXML 
-    private MenuItem menu_2cup;
-   @FXML 
-    private MenuItem menu_80mm;
-   @FXML 
-    private MenuItem menu_90mm;
-   @FXML 
-    private MenuItem menu_normelspoon;
-   @FXML 
-    private MenuItem menu_fork;
-   @FXML 
-    private MenuItem menu_knife;
-   @FXML 
-    private MenuItem menu_55mm210mm;
-   @FXML 
-    private MenuItem menu_7mm210mm;
-   @FXML 
-    private MenuItem menu_10mm210mm;
-   @FXML 
-    private MenuItem menu_7mm230mm;
-   @FXML 
-    private MenuItem menu_14cms16cms;
-   @FXML 
-    private MenuItem menu_11cm;  
     
    @FXML 
     private AnchorPane anchor_pane;
@@ -308,12 +141,37 @@ public class BillingController implements Initializable {
     private Button bt_pay;
     @FXML
     private Button bt_close;
+    
+     @FXML
+    private Button bt_home;
+      @FXML
+    private Button bt_edit;
+       @FXML
+    private Button bt_view;
+        @FXML
+    private Button bt_exit;
+        
+    @FXML
+    private MenuButton  menu_product;
+    @FXML
+    private MenuButton  menu_model;
+    @FXML
+    private MenuButton  menu_size;
+    
+    private String product_name;
+    private String product_model;
+    private String product_size;
+
+
             
     private double totals = 0;            // Total amount
     private String currentTime = "";       // Time
     private String currentDate = "";       // Date
     private int Count_Bill =0;       // Bill number
     private int counts = 0;
+    private int quntitys = 0;
+    private int Opening_Stock = 0;
+
     
    @FXML 
     private TableView<Billing_pojo> tableView;  // MyData = your model class
@@ -352,95 +210,33 @@ public class BillingController implements Initializable {
         table_amount.setCellValueFactory(new PropertyValueFactory<>("amount"));
 
               table_view.setItems(billdata);
-
-
- 
-    }
-      @FXML 
-    private void product1(ActionEvent event) {
-        
-    
+              
+        try {
+            PRODUCTS();
+        } catch (Exception ex) {
+            Logger.getLogger(BillingController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                
 }
-
-
-   @FXML 
-    private void plate(ActionEvent event) {
-        
-        String menuplate = menu_plate.getText();
-        
-        view_product.setText(menuplate);
-          
-    }
-
-   @FXML 
-    private void cup(ActionEvent event) {
-        
-        String menucup = menu_cup.getText();
-        
-        view_product.setText(menucup);
-
-    }
-
-   @FXML 
-    private void bowls(ActionEvent event) {
-        
-      String menubowls = menu_bowls.getText();
+      @FXML
+     private void ProductName(ActionEvent event) throws Exception {
+         
+     }
+      @FXML
+     private void productModel(ActionEvent event) throws Exception {
+         
+     }
+      @FXML
+     private void ProductSize(ActionEvent event) throws Exception {
+         
+     }
+    
+    
+ 
+    @FXML
+      private void add(ActionEvent event) throws Exception {
        
-       view_product.setText(menubowls);
-
-    }
-
-   @FXML 
-    private void container(ActionEvent event) {
-        
-        String menucontainer = menu_container.getText();
-        
-        view_product.setText(menucontainer);;
-    }
-
-   @FXML 
-    private void trays(ActionEvent event) {
-        
-        String menutrays = menu_trays.getText();
-        
-        view_product.setText(menutrays);
-    }
-
-   @FXML 
-    private void box(ActionEvent event) {
-        
-        String menubox = menu_box.getText();
-        view_product.setText(menubox);
-    }
-
-   @FXML 
-    private void spoon(ActionEvent event) {
-        
-        String menuspoon =  menu_spoon.getText();
-       
-       view_product.setText(menuspoon);
-    }
-
-   @FXML 
-    private void straws(ActionEvent event) {
-        
-         String menustraws = menu_straws.getText();
-        
-        view_product.setText(menustraws);
-    }
-
-   @FXML 
-    private void glass(ActionEvent event) {
-        
-         String menuglass = menu_glass.getText();
-        
-        view_product.setText(menuglass);
-    }
-
-
-   @FXML 
-    private void add(ActionEvent event) throws Exception {
-        
+   
         counts=counts+1;
         
         System.out.print(counts);
@@ -452,62 +248,55 @@ public class BillingController implements Initializable {
             Bill_Dao bills =new Bill_Dao();
  
         
-        String products = view_product.getText();
-        String pro_name = view_productname.getText();
-        String pro_size = view_productsize.getText();
+       String ProductName = menu_product.getText();
+       String ProductModel = menu_model.getText();
+       String ProductSize = menu_size.getText();
         String qnt1 = txt_quntity.getText();
         String times = lable_tamie.getText();
         String dates =lable_date.getText();
         String totall = lable_total.getText();
         String bills_name = lable_bill.getText();
         
-        int quntity= Integer.parseInt(qnt1);
+       int quntity= Integer.parseInt(qnt1);
+       
+       
         
         
-    Select_amount_pojo pricesed = bills.select_data(products, pro_name, pro_size, quntity);
+   Select_amount_pojo pricesed = bills.select_data(ProductName, ProductModel, ProductSize, quntity);
     
-
         
-     double price = pricesed.getPrice();
+   double price = pricesed.getPrice();
+double discountPercent = pricesed.getDiscount();
+
+double totalPrice = price * quntity;
+double discountAmount = totalPrice * discountPercent / 100;
+double finalAmount = totalPrice - discountAmount;
+
+// 👉 ADD ITEM FIRST
+Billing_Data tableda = new Billing_Data(
+        ProductName,
+        ProductModel,
+        ProductSize,
+        quntity,
+        price,
+        discountAmount,
+        finalAmount,
+        currentDate,
+        currentTime,
+        0
+);
+
+billdata.add(tableda);
+
+totals = 0;
+for (Billing_Data item : billdata) {
+    totals += item.getAmount();
+}
+
+lable_total.setText(new DecimalFormat("#,##0.00").format(totals));
+
     
-     double discountamount =0;
     
-     double amount = 0;
-     
-   
-
- if (quntity <= 1000) {
-        discountamount = price * quntity * 1 / 100.0;
-    } else if (quntity <= 3000) {
-        discountamount = price * quntity * 3 / 100.0;
-    } else if (quntity <= 5000) {
-        discountamount = price * quntity * 5 / 100.0;
-    } else if (quntity <= 7000) {
-        discountamount = price * quntity * 8 / 100.0;
-    } else if (quntity <= 9000) {
-        discountamount = price * quntity * 10 / 100.0;
-    } else if (quntity <= 11000) {
-        discountamount = price * quntity * 12 / 100.0;
-    } else {
-        discountamount = price * quntity * 15 / 100.0;
-    }
-
-    amount = (price * quntity) - discountamount;
-    
-   Billing_Data tableda = new Billing_Data(products, pro_name, pro_size, quntity, price, discountamount, amount, currentDate, currentTime, totals);
-
-   billdata.add(tableda);
-
-
-    // accumulate totals
-     totals = 0;
-    for (Billing_Data item : billdata) {
-        totals += item.getAmount();
-    }  
-    DecimalFormat df = new DecimalFormat("#,##0");
-    lable_total.setText(df.format(totals));
-   //  lable_total.setText(String.valueOf(totals));
-
     LocalTime time = LocalTime.now();
    currentTime  = time.format(DateTimeFormatter.ofPattern("hh:mm:ss a"));
    
@@ -539,26 +328,20 @@ lable_date.setText(currentDate);
          
        Billing_pojo bill = new Billing_pojo();
   
-       bill.setProduct(products);
-       bill.setPro_name(pro_name);
-       bill.setPro_size(pro_size);
+       bill.setProduct(ProductName);
+       bill.setPro_name(ProductModel);
+       bill.setPro_size(ProductSize);
        bill.setQuntity(quntity);
        bill.setPrice(price);
-       bill.setDiscount(discountamount);
-       bill.setAmount(amount);
+       bill.setDiscount(discountAmount);
+       bill.setAmount(finalAmount);
        bill.setDate(currentDate);
        bill.setTime(currentTime);
        bill.setTotal(totals);
        
-        
-     
-    System.out.println(products+" , "+ "Hii kumar "+price+"  "+discountamount+"  "+amount);
-        
-//    Billing_Data tableda = new Billing_Data(products, pro_name, pro_size, quntity, price, discountamount, amount);
-      
-//    billdata.add(tableda);
-    
-   bills.Items_Add(counts,Count_Bill1,currentDate,currentTime,products,pro_name,pro_size,quntity,price,discountamount,amount,totals);
+                
+
+   bills.Items_Add(counts,Count_Bill1,currentDate,currentTime,ProductName,ProductModel,ProductSize,quntity,price,finalAmount, finalAmount,totals);
     }
      @FXML
 private void quntity(ActionEvent event) {
@@ -578,8 +361,8 @@ private void quntity(ActionEvent event) {
     }
     
    @FXML 
-    private void close(ActionEvent event) {
-        
+    private void close(ActionEvent event) throws Exception{
+          
         int select = table_view.getSelectionModel().getSelectedIndex();
         table_view.getItems().remove(select);
     }
@@ -618,35 +401,7 @@ private void quntity(ActionEvent event) {
         @FXML 
     private void receipt(ActionEvent event) throws Exception {
 
-      PrinterJob job = PrinterJob.createPrinterJob();
-    if (job == null) {
-        System.out.println("❌ No printer found");
-        return;
-    }
-
-    Stage stage = (Stage) anchor_pane.getScene().getWindow();
-
-    if (job.showPrintDialog(stage)) {
-
-        PageLayout pageLayout = job.getPrinter()
-                .getDefaultPageLayout();
-
-        double scaleX = pageLayout.getPrintableWidth() / anchor_pane.getBoundsInParent().getWidth();
-        double scaleY = pageLayout.getPrintableHeight() / anchor_pane.getBoundsInParent().getHeight();
-        double scale = Math.min(scaleX, scaleY);
-
-        Scale scaleTransform = new Scale(scale, scale);
-        anchor_pane.getTransforms().add(scaleTransform);
-
-        boolean success = job.printPage(anchor_pane);
-
-        if (success) {
-            job.endJob();
-            System.out.println("✅ Full receipt printed");
-        }
-
-        anchor_pane.getTransforms().remove(scaleTransform);
-    }
+    next_new();
 }    
 
 @FXML 
@@ -676,600 +431,10 @@ Bill_Dao bills = new Bill_Dao();
 
 bills.Bill_AMT(Count_Bill, currentDate, currentTime, customer_name, customer_Number, totals, sub_total, p_amt, balance, received);
 
-next_new();
-    
-    }
-           @FXML 
-    private void productname(ActionEvent event) {
-    
-    }
+    clearBillData();
 
-   @FXML 
-    private void plainsuper(ActionEvent event) {
-        
-       
-        String menuplainsuper =  menu_plainsuper.getText();
-      
-      view_productname.setText(menuplainsuper);
     }
-
-   @FXML 
-    private void plainpizza(ActionEvent event) {
-        
-        String menuplainpizza =  menu_plainpizza.getText();
-       
-       view_productname.setText(menuplainpizza);
-    }
-
-   @FXML 
-    private void squareplain(ActionEvent event) {
-        
           
-       String menusquareplain =  menu_squareplain.getText();
-       
-       view_productname.setText(menusquareplain);
-    }
-
-   @FXML 
-    private void square(ActionEvent event) {
-        
-         
-        String menusquare = menu_square.getText();
-        
-        view_productname.setText(menusquare);
-    }
-
-   @FXML 
-    private void roundcup(ActionEvent event) {
-        
-        String menuroundcup = menu_roundcup.getText();
-        
-        view_productname.setText(menuroundcup);
-    }
-
-   @FXML 
-    private void squarecup(ActionEvent event) {
-        
-         String menusquarecup =  menu_squarecup.getText();
-       
-       view_productname.setText(menusquarecup);
-    }
-
-   @FXML 
-    private void roundcupsuper(ActionEvent event) {
-        
-         String menuroundcupsuper =   menu_roundcupsuper.getText();
-      
-      view_productname.setText(menuroundcupsuper);
-    }
-
-   @FXML 
-    private void squarecupsuper(ActionEvent event) {
-        
-        String menusquarecupsuper =  menu_squarecupsuper.getText();
-       
-       view_productname.setText(menusquarecupsuper);
-    }
-
-   @FXML 
-    private void classibio(ActionEvent event) {
-        
-         String menuclassibio =  menu_classibio.getText();
-      
-      view_productname.setText(menuclassibio);
-    }
-
-   @FXML 
-    private void tea(ActionEvent event) {
-        
-         String menutea = menu_tea.getText();
-      
-      view_productname.setText(menutea);
-    }
-
-   @FXML 
-    private void clamshell(ActionEvent event) {
-        
-      String menuclamshell = menu_clamshell.getText();
-        
-        view_productname.setText(menuclamshell);
-    }
-
-   @FXML 
-    private void wooden(ActionEvent event) {
-        
-         String menuwooden = menu_wooden.getText();
-        
-        view_productname.setText(menuwooden);
-    }
-
-   @FXML 
-    private void round3cup(ActionEvent event) {
-        
-         String menuround3cup = menu_round3cup.getText();
-       
-       view_productname.setText(menuround3cup);
-    }
-
-   @FXML 
-    private void square3cup(ActionEvent event) {
-        
-          String menusquare3cup = menu_square3cup.getText();
-        
-        view_productname.setText(menusquare3cup);
-    }
-
-   @FXML 
-    private void square4cup(ActionEvent event) {
-        
-        String menusquare4cup =   menu_square4cup.getText();
-      
-      view_productname.setText(menusquare4cup);
-    }
-
-   @FXML 
-    private void reound4cup(ActionEvent event) {
-        
-        
-        String menuround4cup = menu_round4cup.getText();
-        
-        view_productname.setText(menuround4cup);
-    }
-
-   @FXML 
-    private void roundplain3cup(ActionEvent event) {
-        
-         String menuroundplain3cup = menu_roundplain3cup.getText();
-       
-       view_productname.setText(menuroundplain3cup);
-    }
-
-   @FXML 
-    private void reoundplain4cup(ActionEvent event) {
-        
-         String menuroundplain4cup =  menu_roundplain4cup.getText();
-       
-       view_productname.setText(menuroundplain4cup);
-    }
-
-   @FXML 
-    private void squareplain3cup(ActionEvent event) {
-        
-        String menusqareplain3cup =  menu_squareplain3cup.getText();
-      
-      view_productname.setText(menusqareplain3cup);
-    }
-    @FXML 
-    private void squareplain4cup(ActionEvent event) {
-        
-        String menusquareplain4cup =  menu_squareplain4cup.getText();
-      
-      view_productname.setText(menusquareplain4cup); 
-    }
-
-    @FXML 
-   private void lid(ActionEvent event) {
-        
-        String menulid = menu_lid.getText();
-       
-       view_productname.setText(menulid);
-    }
-
-    @FXML 
-   private void cup3(ActionEvent event) {
-        
-        String menu3cup =  menu_3cup.getText();
-       
-       view_productname.setText(menu3cup);
-    }
-
-    @FXML 
-   private void cup4(ActionEvent event) {
-        
-         String menu4cup =  menu_4cup.getText();
-       
-       view_productname.setText(menu4cup);
-    }
-
-    @FXML 
-   private void cup5(ActionEvent event) {
-        
-        String menu5cup = menu_5cup.getText();
-        
-        view_productname.setText(menu5cup);
-    }
-
-    @FXML 
-   private void cup8(ActionEvent event) {
-        
-        String menu8cup =  menu_8cup.getText();
-       
-       view_productname.setText(menu8cup);
-    }
-       @FXML 
-    private void productsize(ActionEvent event) {
-    
-    }
-
-    @FXML 
-   private void inch12(ActionEvent event) {
-        
-        String menu12inch =  menu_12inch.getText();
-       
-       view_productsize.setText(menu12inch);
-    }
-
-    @FXML 
-   private void xl12inch(ActionEvent event) {
-        
-        String menu12inchxl =  menu_12inchxl.getText();
-       
-       view_productsize.setText(menu12inchxl);
-    }
-
-    @FXML 
-   private void inch10(ActionEvent event) {
-        
-               
-              String menu10inch =  menu_10inch.getText();
-              
-              view_productsize.setText(menu10inch);
-
-    }
-
-    @FXML 
-   private void inch9(ActionEvent event) {
-        
-        String menu9inch =  menu_9inch.getText();
-      
-      view_productsize.setText(menu9inch);
-    }
-
-    @FXML 
-   private void inch7(ActionEvent event) {
-        
-        String menu7inch = menu_7inch.getText();
-        
-        view_productsize.setText(menu7inch);
-    }
-
-    @FXML 
-   private void inch6(ActionEvent event) {
-        
-        String menu6inch =  menu_6inch.getText();
-       
-       view_productsize.setText(menu6inch);
-    }
-
-    @FXML 
-   private void inch5(ActionEvent event) {
-        
-        String menu5inch = menu_5inch.getText();
-        
-        view_productsize.setText(menu5inch);
-    }
-
-    @FXML 
-   private void inch4(ActionEvent event) {
-        
-        String menu4inch =   menu_4inch.getText();
-      
-      view_productsize.setText(menu4inch);
-    }
-
-    @FXML 
-   private void ml480(ActionEvent event) {
-        
-         String menu480ml =  menu_480ml.getText();
-       
-       view_productsize.setText(menu480ml);
-    }
-
-    @FXML 
-   private void ml360(ActionEvent event) {
-        
-        String menu360ml =  menu_360ml.getText();
-       
-       view_productsize.setText(menu360ml);
-    }
-
-    @FXML 
-   private void ml340(ActionEvent event) {
-        
-         String menu340ml =  menu_340ml.getText();
-       
-       view_productsize.setText(menu340ml);
-    }
-
-    @FXML 
-   private void ml240(ActionEvent event) {
-        
-         String menui240ml = menu_240ml.getText();
-        
-        view_productsize.setText(menui240ml);
-    }
-
-    @FXML 
-   private void ml210(ActionEvent event) {
-        
-        String menu210ml =  menu_210ml.getText();
-      
-      view_productsize.setText(menu210ml);
-    }
-
-    @FXML 
-   private void ml180(ActionEvent event) {
-        
-         String menu180ml =  menu_180ml.getText();
-       
-       view_productsize.setText(menu180ml);
-    }
-
-    @FXML 
-   private void ml150(ActionEvent event) {
-        
-        String menu150ml = menu_150ml.getText();
-       
-       view_productsize.setText(menu150ml);
-    }
-
-    @FXML 
-   private void ml120(ActionEvent event) {
-        
-        String menu120ml = menu_120ml.getText();
-       
-       view_productsize.setText(menu120ml);
-    }
-
-    @FXML 
-   private void ml110(ActionEvent event) {
-        
-         String menu110ml = menu_110ml.getText();
-       
-       view_productsize.setText(menu110ml);
-    }
-
-    @FXML 
-   private void ml90(ActionEvent event) {
-        
-         String menu90ml = menu_90ml.getText();
-        
-        view_productsize.setText(menu90ml);
-    }
-
-    @FXML 
-   private void ml60(ActionEvent event) {
-        
-          
-       String menu60ml = menu_60ml.getText();
-       
-       view_productsize.setText(menu60ml);
-    }
-
-    @FXML 
-   private void ml55(ActionEvent event) {
-        
-         String menu55ml =  menu_55ml.getText();
-       
-       view_productsize.setText(menu55ml);
-    }
-
-    @FXML 
-   private void ml30(ActionEvent event) {
-        
-         String menu30ml =  menu_30ml.getText();
-       
-       view_productsize.setText(menu30ml);
-    }
-
-    @FXML 
-   private void ml500(ActionEvent event) {
-        
-          String menu500ml = menu_500ml.getText();
-       
-       view_productsize.setText(menu500ml);
-    }
-
-    @FXML 
-   private void ml750(ActionEvent event) {
-        
-         String menu750ml = menu_750ml.getText();
-       
-       view_productsize.setText(menu750ml);
-    }
-
-    @FXML 
-   private void b2b(ActionEvent event) {
-        
-         String menub2b =  menu_b2b.getText();
-       
-       view_productsize.setText(menub2b);
-    }
-
-    @FXML 
-   private void d1(ActionEvent event) {
-        
-         String menu1d =  menu_1d.getText();
-       
-       view_productsize.setText(menu1d);
-    }
-
-    @FXML 
-   private void d2(ActionEvent event) {
-        
-         String menu2d = menu_2d.getText();
-       
-       view_productsize.setText(menu2d);
-    }
-
-    @FXML 
-   private void d3(ActionEvent event) {
-        
-        String menu3d =  menu_3d.getText();
-       
-       view_productsize.setText(menu3d);
-    }
-
-    @FXML 
-   private void d5(ActionEvent event) {
-        
-         String menu5d =  menu_5d.getText();
-       
-       view_productsize.setText(menu5d);
-    }
-
-    @FXML 
-   private void size66(ActionEvent event) {
-        
-        String menusize66 =  menu_size66.getText();
-      
-      view_productsize.setText(menusize66);
-    }
-
-    @FXML 
-   private void size96(ActionEvent event) {
-        
-         String menusize96 =  menu_size96.getText();
-       
-       view_productsize.setText(menusize96);
-    }
-
-    @FXML 
-   private void size99(ActionEvent event) {
-        
-         String menusize99 =  menu_size99.getText();
-       
-       view_productsize.setText(menusize99);
-    }
-
-    @FXML 
-   private void size993(ActionEvent event) {
-        
-         String menusize993 = menu_size993.getText();
-       
-       view_productsize.setText(menusize993);
-    }
-
-    @FXML 
-   private void smart(ActionEvent event) {
-        
-         String menusmart =  menu_smart.getText();
-       
-       view_productsize.setText(menusmart);
-    }
-
-    @FXML 
-   private void ml3000(ActionEvent event) {
-        
-        String menu300ml = menu_300ml.getText();
-       
-       view_productsize.setText(menu300ml);
-    }
-
-    @FXML 
-   private void size883(ActionEvent event) {
-        
-         String menusize883 =  menu_size883.getText();
-       
-       view_productsize.setText(menusize883);
-    }
-
-    @FXML 
-   private void cup2(ActionEvent event) {
-        
-         String menu2cup = menu_2cup.getText();
-       
-       view_productsize.setText(menu2cup);
-    }
-
-    @FXML 
-   private void mm80(ActionEvent event) {
-        
-       String menu80mm = menu_80mm.getText();
-       
-       view_productsize.setText(menu80mm);
-    }
-
-    @FXML 
-   private void mm90(ActionEvent event) {
-        
-     String menu90mm = menu_90mm.getText();
-        
-        view_productsize.setText(menu90mm);
-    }
-
-    @FXML 
-   private void normelspoon(ActionEvent event) {
-        
-         String menunormelsppoon = menu_normelspoon.getText();
-        
-        view_productsize.setText(menunormelsppoon);
-    }
-
-    @FXML 
-   private void fork(ActionEvent event) {
-        
-        String menufork = menu_fork.getText();
-        
-        view_productsize.setText(menufork);
-    }
-
-    @FXML 
-   private void knife(ActionEvent event) {
-        
-         String menuknife = menu_knife.getText();
-        
-        view_productsize.setText(menuknife);
-    }
-
-    @FXML 
-   private void mm55mm210(ActionEvent event) {
-        
-        String menu55mm210mm = menu_55mm210mm.getText();
-       
-       view_productsize.setText(menu55mm210mm);
-    }
-
-    @FXML 
-   private void mm7mm210(ActionEvent event) {
-        
-        String menu7mm210mm = menu_7mm210mm.getText();
-        
-        view_productsize.setText(menu7mm210mm);
-    }
-
-    @FXML 
-   private void mm10mm210(ActionEvent event) {
-        
-        String menu10mm210mm =  menu_10mm210mm.getText();
-       
-       view_productsize.setText(menu10mm210mm);
-    }
-
-    @FXML 
-   private void mm7mm230(ActionEvent event) {
-        
-         String menu7mm230mm =  menu_7mm230mm.getText();
-       
-       view_productsize.setText(menu7mm230mm);
-    }
-
-    @FXML 
-   private void cms14cms16(ActionEvent event) {
-        
-        String menu14cms16cms = menu_14cms16cms.getText();
-        
-        view_productsize.setText(menu14cms16cms);
-    }
-
-    @FXML 
-   private void cm11(ActionEvent event) {
-        
-         String menu11cm = menu_11cm.getText();
-        
-        view_productsize.setText(menu11cm);
-    }
-
 public void count() throws Exception {
    
     
@@ -1420,5 +585,189 @@ document.close();
       PN_Main. stage.show(); 
      
      }
+      @FXML 
+    private void home(ActionEvent event) {
+        
+    
+}
+      @FXML 
+    private void edit(ActionEvent event) throws Exception{
+        
+     Parent root = FXMLLoader.load(getClass().getResource("Bills_edit.fxml"));
+        
+      Scene scene = new Scene(root);
+        
+      PN_Main.stage.setScene(scene);
+        
+      PN_Main. stage.show(); 
+}    
+      @FXML 
+    private void view(ActionEvent event) {
+        
+    
+}     
+      @FXML 
+    private void exit(ActionEvent event) throws Exception{
+        
+   LocalTime time = LocalTime.now();
+   String Out_time= time.format(DateTimeFormatter.ofPattern("hh:mm:ss a"));
    
+       System.out.println("Out_Time: "+Out_time);
+        
+    LocalDate date = LocalDate.now();
+    String Out_date = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+             
+    String user = PN_Dao.name;
+    String pass = PN_Dao.pass1;
+
+ Class.forName(PN_Dao_Paroperty.driver);
+
+    String sql = "INSERT INTO user_working(username, password ,out_time,out_date) VALUES (?,?,?,?)";
+
+    try (Connection con = DriverManager.getConnection(
+            PN_Dao_Paroperty.url + PN_Dao_Paroperty.db,
+            PN_Dao_Paroperty.user,
+            PN_Dao_Paroperty.pass);
+         PreparedStatement ps = con.prepareStatement(sql)) {
+
+        // set values
+        ps.setString(1, user);
+        ps.setString(2, pass);
+        ps.setString(3, Out_time);
+        ps.setString(4, Out_date);
+
+        int num = ps.executeUpdate();
+
+        if (num > 0) {
+            System.out.println("✅ Intime inserted");
+        } else {
+            System.out.println("❌ Not inserted");
+        }
+    }
+}
+    
+  public void PRODUCTS() {
+
+    String sql = "SELECT DISTINCT product_name FROM product_insert";
+
+    try (Connection con = DriverManager.getConnection(
+            PN_Dao_Paroperty.url + PN_Dao_Paroperty.db,
+            PN_Dao_Paroperty.user,
+            PN_Dao_Paroperty.pass);
+         PreparedStatement ps = con.prepareStatement(sql);
+         ResultSet rs = ps.executeQuery()) {
+
+        menu_product.getItems().clear();
+
+        while (rs.next()) {
+            String product = rs.getString("product_name");
+
+            MenuItem item = new MenuItem(product);
+            item.setOnAction(e -> {
+                menu_product.setText(product);
+                product_name = product;
+
+                MODELS(product); // load models
+            });
+
+            menu_product.getItems().add(item);
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+
+
+public void MODELS(String selectedProduct) {
+
+    String sql = "SELECT DISTINCT model FROM product_insert WHERE product_name = ?";
+
+    try (Connection con = DriverManager.getConnection(
+            PN_Dao_Paroperty.url + PN_Dao_Paroperty.db,
+            PN_Dao_Paroperty.user,
+            PN_Dao_Paroperty.pass);
+         PreparedStatement ps = con.prepareStatement(sql)) {
+
+        ps.setString(1, selectedProduct);
+        ResultSet rs = ps.executeQuery();
+
+        menu_model.getItems().clear();
+        menu_size.getItems().clear(); // reset size
+
+        while (rs.next()) {
+            String model = rs.getString("model");
+
+            MenuItem item = new MenuItem(model);
+            item.setOnAction(e -> {
+                menu_model.setText(model);
+                product_model = model;
+
+                SIZE(selectedProduct, model); // load sizes ONLY on click
+            });
+
+            menu_model.getItems().add(item);
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+public void SIZE(String product, String model) {
+
+    String sql = "SELECT DISTINCT size FROM product_insert WHERE product_name = ? AND model = ?";
+
+    try (Connection con = DriverManager.getConnection(
+            PN_Dao_Paroperty.url + PN_Dao_Paroperty.db,
+            PN_Dao_Paroperty.user,
+            PN_Dao_Paroperty.pass);
+         PreparedStatement ps = con.prepareStatement(sql)) {
+
+        ps.setString(1, product);
+        ps.setString(2, model);
+
+        ResultSet rs = ps.executeQuery();
+
+        menu_size.getItems().clear();
+
+        while (rs.next()) {
+            String size = rs.getString("size");
+
+            MenuItem item = new MenuItem(size);
+            item.setOnAction(e -> {
+                menu_size.setText(size);
+                product_size = size;
+            });
+
+            menu_size.getItems().add(item);
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+private void clearBillData() {
+
+    // Table clear
+    billdata.clear();
+
+    // Reset totals
+    totals = 0;
+    lable_total.setText("0");
+    labele_balance_amount.setText("0");
+
+    // Clear text fields
+    txt_quntity.clear();
+    txt_paid_amount.clear();
+    txt_customer.clear();
+    txt_contact.clear();
+
+    menu_product.setText("Product");
+    menu_model.setText("Model");
+    menu_size.setText("Size");
+
+    menu_model.getItems().clear();
+    menu_size.getItems().clear();
+
+    counts = 0;
+}
+
+
 }

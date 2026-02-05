@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<!-- A4 SIZE : 794 x 1123 (96 DPI) -->
+
+<AnchorPane fx:id="anchorpane_pane" prefHeight="1123.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pn_plate_projects.Users_Detials_PrinterController">
+
+    <children>
+
+        <!-- HEADER -->
+        <AnchorPane layoutX="20" layoutY="20" prefHeight="320" prefWidth="754">
+            <children>
+                <Rectangle arcHeight="5" arcWidth="5" fill="#fcfcfc" height="285.0" stroke="BLACK" width="755.0" />
+
+                <ImageView fitHeight="120" fitWidth="127.0" layoutX="10" layoutY="10">
+                    <image>
+                        <Image url="@../image/Untitled%20design.png" />
+                    </image>
+                </ImageView>
+
+                <Label layoutX="150" layoutY="30" text="SRI PARVATHI AMMAN ENTERPRISES">
+                    <font>
+                        <Font name="Aparajita" size="20" />
+                    </font>
+                </Label>
+
+                <Label layoutX="420.0" layoutY="173.0" text="Total Bills:">
+                    <font><Font size="14" /></font>
+                </Label>
+
+                <Label layoutX="449.0" layoutY="207.0" text="Date :">
+                    <font><Font size="14" /></font>
+                </Label>
+            <Label layoutX="150.0" layoutY="61.0" prefHeight="18.0" prefWidth="450.0" text="4/484,PERAVOOR,KATTOORANI ROAD,RAMANATHAPURAM,TAMIL NADU-623504" />
+            <Label layoutX="150.0" layoutY="79.0" prefHeight="18.0" prefWidth="43.0" text="Phone: ">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+            <Label layoutX="191.0" layoutY="79.0" prefHeight="18.0" prefWidth="102.0" text="+919578843710 " />
+            <Label layoutX="193.0" layoutY="97.0" prefHeight="18.0" prefWidth="239.0" text="sriparvathiammanenterprise@gmail.com">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="97.0" prefHeight="18.0" prefWidth="34.0" text="Email: ">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+            <Label layoutX="20.0" layoutY="207.0" text="User Name:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="244.0" text="PassWord:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_username" layoutX="150.0" layoutY="206.0" prefHeight="22.0" prefWidth="287.0" text="Null">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="labele_total_bill_count" layoutX="504.0" layoutY="172.0" prefHeight="22.0" prefWidth="239.0" text="00">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="labele_date" layoutX="504.0" layoutY="206.0" prefHeight="22.0" prefWidth="239.0" text="Null">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="labele_password" layoutX="150.0" layoutY="244.0" prefHeight="22.0" prefWidth="287.0" text="Null">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Line endX="655.5" endY="-16.5" layoutX="100.0" layoutY="160.0" startX="-100.00000762939453" startY="-16.5" />
+            <Label layoutX="450.0" layoutY="244.0" text="Time:">
+               <font>
+                  <Font size="14" />
+               </font>
+            </Label>
+            <Label fx:id="labele_time" layoutX="504.0" layoutY="244.0" prefHeight="22.0" prefWidth="239.0" text="Null">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+
+            </children>
+        </AnchorPane>
+
+        <!-- TABLE -->
+        <TableView fx:id="table_view" layoutX="20" layoutY="310.0" prefHeight="789.0" prefWidth="756.0">
+            <columns>
+                <TableColumn fx:id="clo_serial" prefWidth="50" text="S.No" />
+                <TableColumn fx:id="clo_billsid" prefWidth="111.9999771118164" text="Bills Id" />
+                <TableColumn fx:id="clo_totalamount" prefWidth="132.79998779296875" text="Total Amount" />
+            <TableColumn fx:id="clo_paidamount" prefWidth="106.4000244140625" text="Paid Amount" />
+            <TableColumn fx:id="clo_blances" prefWidth="141.60003662109375" text="Balances" />
+            <TableColumn fx:id="clo_date" prefWidth="102.39999389648438" text="Date" />
+            <TableColumn fx:id="clo_time" prefWidth="108.79998779296875" text="Time" />
+            </columns>
+        </TableView>
+
+    </children>
+</AnchorPane>

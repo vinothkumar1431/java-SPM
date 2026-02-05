@@ -5,22 +5,29 @@
  */
 package pn_plate_projects;
 
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.print.PageLayout;
 import javafx.print.PageOrientation;
 import javafx.print.Paper;
 import javafx.print.Printer;
 import javafx.print.PrinterJob;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -86,6 +93,11 @@ public class New_Bill_ModelController implements Initializable {
     private Label tableview_balance;
     
     private int billId;
+    private String time_1;
+    private String date_1;
+    private double total_amount;
+    private int Opening_Stock;
+    private int Quntity;
 
     /**
      * Initializes the controller class.
@@ -110,6 +122,7 @@ public class New_Bill_ModelController implements Initializable {
                 new PropertyValueFactory<>("price"));
         tableview_amount.setCellValueFactory(
                 new PropertyValueFactory<>("amount"));
+        
         
 
         table_view.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
@@ -138,6 +151,8 @@ public class New_Bill_ModelController implements Initializable {
                 labele_bill_id.setText(String.valueOf(billId));
                 
                 loadLastamount(billId);
+                
+                System.out.println("Bills Id :" + billId);
             }
         }
     }  
@@ -157,24 +172,24 @@ public class New_Bill_ModelController implements Initializable {
 
         try (ResultSet rs = ps.executeQuery()) {
             if (rs.next()) {
-                String date_1 = rs.getString("date");
-                String time_1 = rs.getString("time");
+                 date_1 = rs.getString("date");
+                 time_1 = rs.getString("time");
                 String customerName_1 = rs.getString("customer_name");
                 long customerNumber_1 = rs.getLong("customer_number");
-                double total_1 = rs.getDouble("total");
+                total_amount = rs.getDouble("total");
                 double subTotal_1 = rs.getDouble("sub_total");
                 double paidAmount_1 = rs.getDouble("paid_amount");
                 double balanceAmount_1 = rs.getDouble("balance_amount");
                 double received_1 = rs.getDouble("received");
 
                 // Use the values as needed
-               System.out.println("Customer: " + customerName_1 + ", Total: " + total_1);
+               System.out.println("Customer: " + customerName_1 + ", Total: " + total_amount);
                 
                 labele_date.setText(date_1);
                 labele_time.setText(time_1);
                 label_customer.setText(customerName_1);
                 labele_c_contact.setText(String.valueOf(customerNumber_1));
-                labele_total.setText(String.valueOf(total_1));
+                labele_total.setText(String.valueOf(total_amount));
                 lable_sub_total.setText(String.valueOf(subTotal_1));
                 tableview_paidamount.setText(String.valueOf(paidAmount_1));
                 tableview_balance.setText(String.valueOf(balanceAmount_1));
@@ -208,6 +223,8 @@ public class New_Bill_ModelController implements Initializable {
 
 
  public void resipt() throws Exception {
+     
+     user_bill_print();
 
     PrinterJob job = PrinterJob.createPrinterJob();
     if (job == null) {
@@ -237,7 +254,9 @@ public class New_Bill_ModelController implements Initializable {
         System.out.println("✅ Receipt printed");
     }
 }
-    public void printBill() {
+    public void printBill() throws Exception {
+        
+        user_bill_print();
 
         PrinterJob printerJob = PrinterJob.createPrinterJob();
 
@@ -266,7 +285,7 @@ public class New_Bill_ModelController implements Initializable {
             }
         }
     }
-    private void autoPrintThermal() {
+    private void autoPrintThermal() throws Exception {
         
     PrinterJob job = PrinterJob.createPrinterJob();
     if (job == null) {
@@ -300,10 +319,158 @@ public class New_Bill_ModelController implements Initializable {
 
     }
 @FXML
-private void box(ActionEvent event) {
+private void box(ActionEvent event) throws Exception {
+    user_bill_print();
+    Out_bill_data();
     autoPrintThermal();
+    Selects();
+}
+  public void user_bill_print() throws Exception{
+  
+    Class.forName(PN_Dao_Paroperty.driver);
+    try (Connection con = DriverManager.getConnection(
+             PN_Dao_Paroperty.url + PN_Dao_Paroperty.db,
+             PN_Dao_Paroperty.user,
+             PN_Dao_Paroperty.pass);
+        PreparedStatement ps = con.prepareStatement("INSERT INTO printing_billing(bill_id,bill_time,bill_date) VALUES (?,?,?)")) {
+
+        ps.setInt(1,billId);
+        ps.setString(2,time_1);
+        ps.setString(3, date_1);
+        int num = ps.executeUpdate();
+
+        if (num > 0){
+            System.out.println("✅ UserBill_Printing inserted:");
+        }   else{
+            System.out.println("❌ Not inserted");
+        }
+    }
+  }
+   private void Out_bill_data()throws Exception{
+       
+  String id = String.valueOf(billId);
+
+LocalTime time = LocalTime.now();
+String Out_time = time.format(DateTimeFormatter.ofPattern("hh:mm:ss a"));
+
+LocalDate date = LocalDate.now();
+String Out_date = date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+
+String user = PN_Dao.name;
+String pass = PN_Dao.pass1;
+
+Class.forName(PN_Dao_Paroperty.driver);
+
+String sql = "INSERT INTO user_working(username, password, billId, billing_time, billing_amount) VALUES (?,?,?,?,?)";
+
+try (Connection con = DriverManager.getConnection(
+        PN_Dao_Paroperty.url + PN_Dao_Paroperty.db,
+        PN_Dao_Paroperty.user,
+        PN_Dao_Paroperty.pass);
+     PreparedStatement ps = con.prepareStatement(sql)) {
+
+    ps.setString(1, user);
+    ps.setString(2, pass);
+    ps.setString(3, id);
+    ps.setString(4, Out_time);
+    ps.setDouble(5, total_amount);
+
+    int num = ps.executeUpdate();
+
+    if (num > 0) {
+        System.out.println("✅ Data inserted successfully");
+    } else {
+        System.out.println("❌ Insert failed");
+    }
 }
 
+}
+  public void Selects() throws Exception {
+
+        Class.forName(PN_Dao_Paroperty.driver);
+
+        try (Connection con = DriverManager.getConnection(
+                PN_Dao_Paroperty.url + PN_Dao_Paroperty.db,
+                PN_Dao_Paroperty.user,
+                PN_Dao_Paroperty.pass);
+
+             PreparedStatement ps = con.prepareStatement(
+                     "SELECT product_name, product_model, product_size, " +
+                     "qut FROM rr_table WHERE bill_id = ? ")) {
+
+            ps.setInt(1, billId);
+
+            try (ResultSet rs = ps.executeQuery()) {
+
+                while (rs.next()) {
+
+                String Producname = rs.getString("product_name");
+                String Producmodel = rs.getString("product_model");
+                String Productsize = rs.getString("product_size");
+                int quntity = rs.getInt("qut");
+                         
+                    openingStock_Select(Producname, Producmodel, Productsize,quntity);
+                }
+            }
+        }
+
+
+    }   
+public void openingStock_Select(String ProductName,String ProductModel, String ProductSize,int qut) throws Exception {
+
+    String sql = "SELECT opening_stock FROM product_insert " +
+                 "WHERE product_name = ? AND model = ? AND size = ?";
+
+    try (Connection con = DriverManager.getConnection(
+            PN_Dao_Paroperty.url + PN_Dao_Paroperty.db,
+            PN_Dao_Paroperty.user,
+            PN_Dao_Paroperty.pass);
+         PreparedStatement ps = con.prepareStatement(sql)) {
+
+        ps.setString(1, ProductName);
+        ps.setString(2, ProductModel);
+        ps.setString(3, ProductSize);
+
+        ResultSet rs = ps.executeQuery();
+
+        if (rs.next()) {
+            Opening_Stock = rs.getInt("opening_stock");
+
+            Quntity = Opening_Stock - qut; 
+
+            openingStock_Update(ProductName, ProductModel, ProductSize);
+        }
+    }
+}
+
+public void openingStock_Update(String productname,String ProductModel,String ProductSize) {
+
+    String sql = "UPDATE product_insert SET opening_stock = ? " +
+                 "WHERE product_name = ? AND model = ? AND size = ?";
+
+    try (Connection con = DriverManager.getConnection(
+            PN_Dao_Paroperty.url + PN_Dao_Paroperty.db,
+            PN_Dao_Paroperty.user,
+            PN_Dao_Paroperty.pass);
+         PreparedStatement ps = con.prepareStatement(sql)) {
+
+        ps.setInt(1, Quntity);          // new opening stock
+        ps.setString(2, productname);
+        ps.setString(3, ProductModel);
+        ps.setString(4, ProductSize);
+
+        int rows = ps.executeUpdate();
+
+        if (rows > 0) {
+            
+        }
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+  public void nextpage()throws Exception{
   
-    
+  
+  }
 }

@@ -132,3 +132,44 @@
     -fx-font-weight: bold;
     -fx-text-fill: #0D47A1;
 }
+#bu_home{
+    
+    -fx-background-color: transparent;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10; 
+    -fx-text-fill: black;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    
+   }
+   #bu_edit{
+    
+    -fx-background-color: transparent;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10; 
+    -fx-text-fill: black;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    
+   }
+   #bu_view{
+    
+    -fx-background-color: transparent;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10; 
+    -fx-text-fill: black;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    
+   }
+   #bu_exit{
+    
+    -fx-background-color: transparent;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10; 
+    -fx-text-fill: black;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+    
+   }

@@ -20,7 +20,103 @@
 
     
 }
-#usear_icon{
-	
-	-fx-size:10px;
+#bt_add{
+    
+    -fx-background-color: transparent;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;  
+}
+#bt_detials{
+    
+    -fx-background-color: transparent;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;  
+}
+#bt_update{
+    
+   -fx-background-color: transparent;
+   -fx-border-radius: 10;
+   -fx-background-radius: 10;  
+    
+}
+#bt_Passwordchenge{
+    
+    -fx-background-color: transparent;
+   -fx-border-radius: 10;
+   -fx-background-radius: 10;  
+     
+}
+#bt_adminsecurity{
+   
+    -fx-background-color: transparent;
+   -fx-border-radius: 10;
+   -fx-background-radius: 10;  
+     
+    
+}
+#menu_Productdetials{
+    
+  -fx-background-color: transparent;
+   -fx-border-radius: 10;
+   -fx-background-radius: 10;  
+    -fx-text-fill: ffffff;
+    
+}
+#menu_totalAmount{
+   -fx-background-color: transparent;
+   -fx-border-radius: 10;
+   -fx-background-radius: 10;  
+    -fx-text-fill: ffffff;
+      
+}
+#menu_areachart{
+    
+   -fx-background-color: transparent;
+   -fx-border-radius: 10;
+   -fx-background-radius: 10;  
+    -fx-text-fill: ffffff;
+      
+}
+#rd_security{
+   -fx-background-color: transparent;
+   -fx-border-radius: 10;
+   -fx-background-radius: 10;  
+       
+    
+}    
+#bt_productdetials{
+     -fx-background-color: transparent;
+   -fx-border-radius: 10;
+   -fx-background-radius: 10;  
+      
+    
+}
+#bt_newstock{
+ 
+   -fx-background-color: transparent;
+   -fx-border-radius: 10;
+   -fx-background-radius: 10;  
+    
+    
+}
+#bt_admin{
+    
+  -fx-background-color: transparent;
+   -fx-border-radius: 10;
+   -fx-background-radius: 10;  
+    -fx-font-size: 18pt;
+
+}
+#bt_deletebills{
+    
+     -fx-background-color: transparent;
+   -fx-border-radius: 10;
+   -fx-background-radius: 10;  
+
+    
+}
+#bt_Security{
+  -fx-background-color: transparent;
+   -fx-border-radius: 10;
+   -fx-background-radius: 10;     
 }

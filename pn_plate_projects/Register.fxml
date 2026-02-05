@@ -8,42 +8,60 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="980.0" prefWidth="1920.0" style="-fx-background-color: #FFE9967A;" stylesheets="@Regester.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pn_plate_projects.BtController">
    <children>
-      <Button fx:id="bt_next" layoutX="960.0" layoutY="772.0" mnemonicParsing="false" onAction="#Next" prefHeight="66.0" prefWidth="131.0" text="Next">
+      <Button fx:id="bt_seve" layoutX="936.0" layoutY="857.0" mnemonicParsing="false" onAction="#save" prefHeight="66.0" prefWidth="131.0" text="Save">
          <font>
             <Font size="25.0" />
          </font></Button>
-      <TextField fx:id="txt_fname" layoutX="519.0" layoutY="295.0" onAction="#fname" prefHeight="62.0" prefWidth="320.0" />
-      <TextField fx:id="txt_lname" layoutX="1002.0" layoutY="295.0" onAction="#lname" prefHeight="62.0" prefWidth="320.0" />
+      <TextField fx:id="txt_fname" layoutX="346.0" layoutY="264.0" onAction="#fname" prefHeight="62.0" prefWidth="410.0" />
+      <TextField fx:id="txt_lname" layoutX="1091.0" layoutY="264.0" onAction="#lname" prefHeight="62.0" prefWidth="320.0" />
       <Label layoutX="551.0" layoutY="30.0" prefHeight="130.0" prefWidth="803.0" text="User Register Form">
          <font>
             <Font name="Bodoni MT Condensed" size="89.0" />
          </font>
       </Label>
-      <Label layoutX="597.0" layoutY="218.0" text="First Name">
+      <Label layoutX="352.0" layoutY="218.0" text="First Name">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label layoutX="1054.0" layoutY="218.0" prefHeight="46.0" prefWidth="166.0" text="Least Name">
+      <Label layoutX="1091.0" layoutY="208.0" prefHeight="46.0" prefWidth="166.0" text="Least Name">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_email" layoutX="519.0" layoutY="468.0" onAction="#email" prefHeight="62.0" prefWidth="803.0" />
-      <Label layoutX="600.0" layoutY="405.0" text="Email">
+      <TextField fx:id="txt_email" layoutX="346.0" layoutY="404.0" onAction="#email" prefHeight="62.0" prefWidth="410.0" />
+      <Label layoutX="352.0" layoutY="357.0" text="Email">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_mob" layoutX="519.0" layoutY="663.0" onAction="#mob" prefHeight="62.0" prefWidth="803.0" stylesheets="@Regester.css" />
-      <Label layoutX="597.0" layoutY="587.0" text="Mobile Number">
+      <TextField fx:id="txt_mob" layoutX="1091.0" layoutY="404.0" onAction="#mob" prefHeight="62.0" prefWidth="320.0" stylesheets="@Regester.css" />
+      <Label layoutX="1091.0" layoutY="357.0" text="Mobile Number">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Button fx:id="bt_back" layoutX="712.0" layoutY="772.0" mnemonicParsing="false" onAction="#back" prefHeight="66.0" prefWidth="131.0" text="Back">
+      <Button fx:id="bt_back" layoutX="661.0" layoutY="857.0" mnemonicParsing="false" onAction="#back" prefHeight="66.0" prefWidth="131.0" text="Back">
          <font>
             <Font size="25.0" />
          </font></Button>
+      <TextField fx:id="txt_password" layoutX="346.0" layoutY="681.0" onAction="#password" prefHeight="62.0" prefWidth="410.0" />
+      <TextField fx:id="txt_con_password" layoutX="1097.0" layoutY="681.0" onAction="#confirm_password" prefHeight="62.0" prefWidth="320.0" />
+      <TextField fx:id="txt_username" layoutX="346.0" layoutY="536.0" onAction="#username" prefHeight="62.0" prefWidth="410.0" />
+      <Label layoutX="348.0" layoutY="490.0" text="UserName">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="1097.0" layoutY="635.0" text="Confirm PossWord">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="352.0" layoutY="635.0" text="PassWord">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

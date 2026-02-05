@@ -29,7 +29,7 @@ public class Bill_Dao {
    
             Class.forName(PN_Dao_Paroperty.driver);
             Connection con = DriverManager.getConnection(PN_Dao_Paroperty.url+PN_Dao_Paroperty.db,PN_Dao_Paroperty.user,PN_Dao_Paroperty.pass);
-            PreparedStatement ps = con.prepareStatement("select price  from Items_plates where product = ? and product_name = ? and  product_size = ? ");
+            PreparedStatement ps = con.prepareStatement("select price , discount  from product_insert where product_name = ? and model = ? and  size = ? ");
       
       ps.setString(1, prodact1);
       ps.setString(2, prodatcname1);
@@ -41,17 +41,20 @@ public class Bill_Dao {
       Select_amount_pojo old =new Select_amount_pojo();
 
       double price = 0;
+      double discount =0;
         
       old.setPrice(price);
         
       while(rs.next()){
       
       price = rs.getDouble("price");
+      discount = rs.getDouble("discount");
+      
       }
       
     System.out.println(price);
       
-   return new Select_amount_pojo(price);
+   return new Select_amount_pojo(price ,discount);
    } 
   
       

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane" prefHeight="980.0" prefWidth="1980.0" stylesheets="@Users_Detials.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pn_plate_projects.Users_DetialsController">
+
+    <!-- Main Content Area -->
+    <StackPane fx:id="stackpane" layoutX="90.0" layoutY="120.0" prefHeight="779.0" prefWidth="930.0">
+
+        <!-- TableView 3 -->
+        <TableView fx:id="table_Usersbills" visible="false">
+            <columns>
+                <TableColumn fx:id="view_serial" prefWidth="60" text="S.No" />
+                <TableColumn fx:id="view_username" prefWidth="200" text="User Name" />
+                <TableColumn fx:id="view_password" prefWidth="200" text="Password" />
+                <TableColumn fx:id="view_billsid" prefWidth="140" text="Billing Id" />
+                <TableColumn fx:id="view_billstime" prefWidth="150" text="Billing Time" />
+                <TableColumn fx:id="view_billsamount" prefWidth="179.19998779296873" text="Bill Amount" />
+            </columns>
+        </TableView>
+   
+                 <!-- TableView 2 (Default Visible) -->
+        <TableView fx:id="table_working" prefHeight="760.0" prefWidth="930.0" visible="true">
+            <columns>
+                <TableColumn fx:id="view_serials" prefWidth="50" text="S.No" />
+                <TableColumn fx:id="view_user" prefWidth="200" text="User Name" />
+                <TableColumn fx:id="view_pass" prefWidth="200" text="Password" />
+                <TableColumn fx:id="view_intime" prefWidth="120" text="In Time" />
+                <TableColumn fx:id="view_indate" prefWidth="120" text="In Date" />
+                <TableColumn fx:id="view_outtime" prefWidth="120" text="Out Time" />
+                <TableColumn fx:id="view_outdate" prefWidth="120" text="Out Date" />
+            </columns>
+        </TableView>
+
+    </StackPane>
+     <Button fx:id="bt_usersbills" layoutX="165.0" layoutY="78.0" onAction="#Users_Bills" text="Users Bills" />
+     <Button fx:id="bt_workings" layoutX="262.0" layoutY="78.0" onAction="#workings" prefHeight="26.0" prefWidth="83.0" text="Workings" />
+   <AnchorPane fx:id="anchor_center" layoutX="1216.0" layoutY="132.0" prefHeight="762.0" prefWidth="683.0">
+      <children>
+         <Button fx:id="bt_Black" layoutX="435.0" layoutY="703.0" mnemonicParsing="false" onAction="#Black" prefHeight="38.0" prefWidth="103.0" text="Block" />
+         <Button fx:id="bt_select" layoutX="296.0" layoutY="703.0" mnemonicParsing="false" onAction="#select" prefHeight="38.0" prefWidth="92.0" text="Delete" />
+         <Button fx:id="bt_moredetial" layoutX="146.0" layoutY="703.0" mnemonicParsing="false" onAction="#moredetial" prefHeight="38.0" prefWidth="103.0" text="More Detials" />
+         <TableView fx:id="tableview_least" layoutX="56.0" layoutY="14.0" prefHeight="667.0" prefWidth="570.0">
+           <columns>
+             <TableColumn fx:id="col_serial" prefWidth="75.0" text="S.No" />
+             <TableColumn fx:id="col_username" prefWidth="244.7999267578125" text="UserName" />
+               <TableColumn fx:id="col_password" prefWidth="249.59995117187498" text="PassWord" />
+           </columns>
+         </TableView>
+      </children>
+   </AnchorPane>
+   <Button fx:id="bt_print" layoutX="581.0" layoutY="78.0" mnemonicParsing="false" onAction="#print" prefHeight="26.0" prefWidth="78.0" text="Print" />
+   <Button fx:id="bt_delete" layoutX="372.0" layoutY="78.0" mnemonicParsing="false" onAction="#delete" prefHeight="26.0" prefWidth="78.0" text="Delete" />
+   <Label layoutX="1467.0" layoutY="60.0" prefHeight="42.0" prefWidth="120.0" text="Total Users">
+      <font>
+         <Font name="Aparajita" size="30.0" />
+      </font>
+   </Label>
+   <Label fx:id="label_totaluser" layoutX="1587.0" layoutY="60.0" prefHeight="42.0" prefWidth="152.0" text="00">
+      <font>
+         <Font name="Aparajita" size="30.0" />
+      </font>
+   </Label>
+   <Button fx:id="bt_home" layoutX="90.0" layoutY="78.0" onAction="#Home" text="Home" />
+   <Button fx:id="bt_clean" layoutX="476.0" layoutY="78.0" mnemonicParsing="false" onAction="#clean" prefHeight="26.0" prefWidth="78.0" text="Clean" />
+
+</AnchorPane>

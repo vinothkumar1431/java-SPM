@@ -1,0 +1,108 @@
+/* ================= ROOT ================= */
+#anchorpan {
+    -fx-background-color: #0F172A;   /* dark slate */
+}
+
+/* ================= TITLE ================= */
+.label {
+    -fx-text-fill: #E5E7EB;          /* soft white */
+    -fx-font-weight: 600;
+}
+
+/* ================= TABLE VIEW – LIGHT ================= */
+.table-view {
+    -fx-background-color:lightslategray;
+    -fx-border-color: #D1D5DB;
+    -fx-border-width: 1;
+}
+
+/* Header background */
+.table-view .column-header-background {
+    -fx-background-color: #F3F4F6;
+}
+
+/* Header text */
+.table-view .column-header .label {
+    -fx-text-fill: #111827;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+/* Rows */
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #111827;
+}
+
+/* Alternate row colors */
+.table-row-cell:odd {
+    -fx-background-color: #FFFFFF;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #F9FAFB;
+}
+
+/* Selected row */
+.table-row-cell:selected {
+    -fx-background-color: #DBEAFE;   /* light blue */
+    -fx-text-fill: #111827;
+}
+
+/* Hover effect */
+.table-row-cell:hover {
+    -fx-background-color: #EFF6FF;
+}
+
+/* ================= TEXT FIELD ================= */
+.text-field {
+    -fx-background-color: #020617;
+    -fx-border-color: #334155;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+
+    -fx-text-fill: #E5E7EB;
+    -fx-prompt-text-fill: #9CA3AF;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused {
+    -fx-border-color: #2563EB;
+}
+
+/* ================= BUTTON ================= */
+.button {
+    -fx-background-color: #1F2937;
+    -fx-border-color: #374151;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+
+    -fx-text-fill: #E5E7EB;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+.button:hover {
+    -fx-background-color: #2563EB;
+}
+
+.button:pressed {
+    -fx-background-color: #1D4ED8;
+}
+
+/* ================= ACTION BUTTONS ================= */
+#bt_conform {
+    -fx-background-color: #16A34A;
+}
+
+#bt_conform:hover {
+    -fx-background-color: #15803D;
+}
+
+#bt_back {
+    -fx-background-color: #DC2626;
+}
+
+#bt_back:hover {
+    -fx-background-color: #B91C1C;
+}

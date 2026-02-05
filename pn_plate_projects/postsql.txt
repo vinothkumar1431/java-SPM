@@ -8,9 +8,6 @@ drop table items
 
 create table orders_items(id int unique not null,item_name varchar not null,quntity numeric not null ,order_date date not null,delivery_date date not null)
 
-create table pn_sign(f_name varchar not null,l_name varchar not null,email varchar not null,mob bigint unique not null)
-
-select *from pn_sign
 
 create table users_pass(username varchar not null,password varchar primary key,con_password varchar not null);
 
@@ -139,6 +136,16 @@ SELECT id_name FROM admin_id ORDER BY id_name DESC LIMIT 1;
 create table billing_items( );
 ------------------------------------------//////*****(EMPLOYEE TABLE)*****//////-----------------------------------------------------------
 
+-----/// USERS DETIALS  ///-------
+
+create table pn_sign (serial_no SERIAL PRIMARY KEY,f_name varchar not null,l_name varchar not null,email varchar not null,mob bigint unique not null , username varchar not null , password varchar not null , con_password varchar not null , date varchar not null , time varchar not null)
+
+select *from pn_sign
+
+SELECT COUNT(*) AS total FROM pn_sign
+
+drop table pn_sign
+
 -----///  1-TABLE SIGN1 ///-------
 
 create table pn_sign(f_name varchar not null,l_name varchar not null,email varchar not null,mob bigint unique not null)
@@ -159,6 +166,8 @@ insert into users_pass values('vinoth','Vinoth@123','Vinoth@123')
 drop table pn_cpass
 
 select * from login
+
+SELECT COUNT(username) FROM users_pass
 
 select login.uname,login.pass,users_pass.username,users_pass.password from login inner join users_pass on login.uname=users_pass.username;
 
@@ -235,7 +244,10 @@ insert into Items_plates values('Plate','Plain Super Plate','12Inch',8.00,1000),
                                ('trays','Square cup super plate','5Inch',5.00,1000)
 					 
 					 
-					 
+SELECT DISTINCT product_name 
+FROM Items_plates 
+WHERE product = 'trays';
+
 select * from Items_plates
 
 drop table Items_plates
@@ -336,6 +348,7 @@ create table bill_amounts (
 
     date varchar not null,
     time varchar not null,
+    time varchar not null,
 
     customer_name varchar(100),
     customer_number varchar(15),
@@ -352,4 +365,128 @@ create table bill_amounts (
 
                 select * from bill_amounts;
 
-                drop table bill_amounts;1
+                drop table bill_amounts;
+                drop table bill_amounts;
+
+-----/////--------- --------USER LOGIN INTIME-------------////////
+
+create table user_intime(username varchar not null ,password varchar not null ,intime varchar not null ,indate varchar not null);
+
+select * from user_intime
+
+drop table user_intime;
+
+-----/////--------- --------USER PRINTING BILLING-------------///
+create table printing_billing (serial_no serial primary key,bill_id varchar not null,bill_time varchar not null,bill_date varchar not null);
+
+select * from printing_billing;
+
+drop table printing_billing;
+
+
+-----/////---------USER WORKING TIME --------
+
+
+create table user_working(username varchar null , password varchar null , in_time varchar null , in_date varchar null ,out_time varchar null ,out_date varchar null, billId varchar null ,billing_time varchar null, billing_amount numeric  null);
+
+select * from user_working;
+
+drop table user_working;
+
+-----/////---------USER ID BALCK /////// --------
+
+create table id_black (serial_no serial primary key,username varchar not null , password varchar not null,first_name varchar not null , least_name varchar not null ,email varchar not null ,moblie_number numeric not null ,date varchar not null , time varchar not null)
+
+select * from id_black;
+
+select username,password,first_name,least_name,email,moblie_number from id_black where username = 'vinoth' and password = 'ierri'
+
+drop table id_black;
+create table rg(name varchar not null,age int not null)
+
+select * from rg;
+
+-----/////--------- PRODUCT INSERT ---------///// --------
+
+create table product_insert (id int not null,product_name varchar not null,model varchar not null,size varchar not null,price numeric not null,discount numeric not null, opening_stock int not null,date varchar not null ,time varchar not null);
+
+SELECT product_name, COUNT(*) AS total FROM product_insert GROUP BY product_name
+
+select * from product_insert;
+
+drop table product_insert;
+
+insert into Items_plates values('Plate','Plain Super Plate','12Inch',8.00,1000),
+                               ('Plate','Plain Super pizza plate','12Inch',9.00,1000),
+                               ('Plate','Square plate','12Inch',7.50,1000),
+                               ('Plate','Round cup plate','12Inch',7.60,1000),
+                               ('Plate','Square cup plate','12Inch',8.10,1000),
+                               ('Plate','Round cup super plate','12Inch',8.60,1000),
+                               ('Plate','Square cup super plate','12Inch',8.60,1000),
+
+
+                                -----/////--------- PRODUCT DELETING ---------///// --------
+								
+create table product_deleteing(serial_number int not null , Productname varchar not null , model varchar not null , size varchar not null , price numeric not null , discount numeric not null , openingstock numeric not null , date varchar not null ,time varchar not null)
+
+select * from product_deleteing
+
+drop table product_deleteing;
+
+                                -----/////--------- PRODUCT BLOCK ---------///// --------
+
+
+create table product_blocks(serial_number int not null , Productname varchar not null , model varchar not null , size varchar not null , price numeric not null , discount numeric not null , openingstock numeric not null , date varchar not null ,time varchar not null)
+
+select * from product_blocks
+
+drop table product_blocks;
+
+                                -----/////--------- USER BILLS UPDATE---------///// --------
+
+
+
+create table usert_bill_delete(serial int not null, billid int not null, customername varchar not null,moblieNumber numeric not null,date varchar not null,time varchar not null,productname varchar not null,model varchar not null,size varchar not null,qty int not null,discount numeric not null,price numeric not null,amount numeric not null,paidamount numeric not null,subtotal numeric not null,receied numeric not null,tolal numeric not null ,balance numeric not null,udeletedate varchar not null,deletetime varchar not null);								
+
+select * from usert_bill_delete;
+
+drop table usert_bill_delete;
+
+                                -----/////--------- ADMIN PRODUCT UPDATE---------///// --------
+
+
+create table old_product_update(serial_number int not null , Productname varchar not null , model varchar not null , size varchar not null , price numeric not null , discount numeric not null , openingstock numeric not null , date varchar not null ,time varchar not null,insertdate varchar not null,inserttime varchar not null)
+
+select * from old_product_update;
+
+drop table old_product_update;
+
+                                -----/////--------- ADMIN SECURITY ---------///// --------
+
+
+create table mobilepass( count int not null ,mobilenumber numeric not null, date varchar not null, time varchar not null);
+
+select * from mobilepass;
+
+drop table mobilepass;
+
+create table product_newstock(serial_number int not null , Productname varchar not null , model varchar not null , size varchar not null , price numeric not null , discount numeric not null , openingstock numeric not null,newstock numeric not null , date varchar not null ,time varchar not null,insertdate varchar not null,inserttime varchar not null)
+
+select * from product_newstock;
+
+drop table product_newstock;
+
+create table project_intro(id int not null , admin_select varchar not null);
+
+select * from project_intro;
+
+drop table project_intro;
+
+
+create table Adminsecuritys(Password varchar not null , conform_Password varchar not null);
+
+select * from Adminsecuritys;
+
+drop table Adminsecuritys;
+
+

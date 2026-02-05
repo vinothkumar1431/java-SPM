@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="980.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pn_plate_projects.Users_full_DetialsController">
+   <children>
+      <StackPane fx:id="stackpane" layoutX="59.0" layoutY="139.0" prefHeight="758.0" prefWidth="1802.0">
+         <children>
+            <TableView fx:id="table_full_detials" prefHeight="758.0" prefWidth="1834.0">
+              <columns>
+                <TableColumn fx:id="col_serial" prefWidth="75.0" text="S.No" />
+                <TableColumn fx:id="col_username" prefWidth="236.0000762939453" text="UserName" />
+                  <TableColumn fx:id="col_password" prefWidth="239.199951171875" text="PassWord" />
+                  <TableColumn fx:id="col_firstname" prefWidth="236.8000030517578" text="First Name" />
+                  <TableColumn fx:id="col_lastname" prefWidth="236.8000030517578" text="Last Name" />
+                  <TableColumn fx:id="col_email" prefWidth="236.8000030517578" text="Email" />
+                  <TableColumn fx:id="col_mobilenumber" prefWidth="236.8000030517578" text="Mobile Number" />
+                  <TableColumn fx:id="col_date" prefWidth="154.4000244140625" text="Date" />
+                  <TableColumn fx:id="col_time" prefWidth="144.8000244140626" text="Time" />
+              </columns>
+            </TableView>
+            <TableView fx:id="table_full_user" prefHeight="758.0" prefWidth="1834.0">
+               <columns>
+                  <TableColumn fx:id="col_serial1" prefWidth="75.0" text="S.No" />
+                  <TableColumn fx:id="col_firstname1" prefWidth="236.8000030517578" text="First Name" />
+                  <TableColumn fx:id="col_lastname1" prefWidth="236.8000030517578" text="Last Name" />
+                  <TableColumn fx:id="col_email1" prefWidth="236.8000030517578" text="Email" />
+                  <TableColumn fx:id="col_mobilenumber1" prefWidth="236.8000030517578" text="Mobile Number" />
+                  <TableColumn fx:id="col_username1" prefWidth="236.0000762939453" text="UserName" />
+                  <TableColumn fx:id="col_password1" prefWidth="239.199951171875" text="PassWord" />
+                  <TableColumn fx:id="col_date1" prefWidth="154.4000244140625" text="Date" />
+                  <TableColumn fx:id="col_time1" prefWidth="144.8000244140626" text="Time" />
+               </columns>
+            </TableView>
+         </children>
+      </StackPane>
+      <Button fx:id="bt_user_detials" layoutX="189.0" layoutY="63.0" mnemonicParsing="false" onAction="#user_detials" prefHeight="26.0" prefWidth="105.0" text="User Detials" />
+      <Button fx:id="bt_home" layoutX="59.0" layoutY="63.0" mnemonicParsing="false" onAction="#home" prefHeight="26.0" prefWidth="105.0" text="Home" />
+      <Button fx:id="bt_block_detials" layoutX="318.0" layoutY="63.0" mnemonicParsing="false" onAction="#block_detials" prefHeight="26.0" prefWidth="105.0" text="Block Detials" />
+      <Button fx:id="bt_back" layoutX="1245.0" layoutY="63.0" mnemonicParsing="false" onAction="#bt_back" prefHeight="26.0" prefWidth="105.0" text="Back" />
+      <Button fx:id="bt_deleting" layoutX="446.0" layoutY="63.0" mnemonicParsing="false" onAction="#deleting_detials" prefHeight="26.0" prefWidth="122.0" text="Deleting Detials" />
+      <Button fx:id="bt_unblock" layoutX="591.0" layoutY="63.0" mnemonicParsing="false" onAction="#block" prefHeight="26.0" prefWidth="106.0" text="UnBlock" />
+      <Button fx:id="bt_delete" layoutX="722.0" layoutY="63.0" mnemonicParsing="false" onAction="#delete" prefHeight="26.0" prefWidth="106.0" text="Delete" />
+      <Button fx:id="bt_block" layoutX="1116.0" layoutY="63.0" mnemonicParsing="false" onAction="#block_" prefHeight="26.0" prefWidth="105.0" text="Block" />
+      <Button fx:id="bt_recovery" layoutX="854.0" layoutY="63.0" mnemonicParsing="false" onAction="#recovery" prefHeight="26.0" prefWidth="105.0" text="Recovery" />
+      <Button fx:id="bt_totalclean" layoutX="984.0" layoutY="63.0" mnemonicParsing="false" onAction="#totalClean" prefHeight="26.0" prefWidth="105.0" text="Total Clean" />
+   </children>
+</AnchorPane>

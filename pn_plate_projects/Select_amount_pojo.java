@@ -12,9 +12,13 @@ package pn_plate_projects;
 public class Select_amount_pojo {
     
     private double price;
+    
+    private double discount;
+    
 
-    public Select_amount_pojo(double price) {
+    public Select_amount_pojo(double price ,double discount) {
         this.price = price;
+        this.discount=discount;
     }
 
     public Select_amount_pojo() {
@@ -26,6 +30,13 @@ public class Select_amount_pojo {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+     public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
     }
     
     

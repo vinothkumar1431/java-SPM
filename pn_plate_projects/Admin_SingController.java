@@ -97,7 +97,7 @@ public class Admin_SingController implements Initializable {
     @FXML
     private void back(ActionEvent event) throws Exception {
         
-      Parent root = FXMLLoader.load(getClass().getResource("Admin_Sing.fxml"));
+      Parent root = FXMLLoader.load(getClass().getResource("Admin_intro_page.fxml"));
         
       Scene scene = new Scene(root);
         

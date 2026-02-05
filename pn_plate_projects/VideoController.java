@@ -62,7 +62,7 @@ public void initialize(URL url, ResourceBundle rb) {
                 Stage currentStage = (Stage) mediaView.getScene().getWindow();
                 currentStage.close();
 
-      Parent root = FXMLLoader.load(getClass().getResource("PN.fxml"));
+      Parent root = FXMLLoader.load(getClass().getResource("Project_Intro_page.fxml"));
         
       Scene scene = new Scene(root);
         

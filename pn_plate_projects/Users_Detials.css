@@ -1,0 +1,134 @@
+/* ================= ROOT ================= */
+#anchorpane {
+    -fx-background-color: #0F172A;
+}
+
+/* ================= LABEL ================= */
+.label {
+    -fx-text-fill: #E5E7EB;
+    -fx-font-weight: 600;
+}
+
+/* Total Users Number */
+#label_totaluser {
+    -fx-text-fill: #38BDF8;
+    -fx-font-weight: 700;
+}
+
+/* TABLE BODY DARK */
+.table-view {
+    -fx-background-color: #6d8196;   /* dark */
+    -fx-border-color: #334155;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+/* HEADER BACKGROUND LIGHT */
+.table-view .column-header-background {
+    -fx-background-color: #F3F4F6;   /* light grey */
+}
+#table_working{
+    
+      -fx-background-color:#6395ee;   
+}
+
+/* HEADER TEXT DARK */
+.table-view .column-header .label {
+    -fx-text-fill: #111827;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+}
+
+/* ROWS */
+.table-row-cell:odd {
+    -fx-background-color: #0B1220;
+}
+.table-row-cell:even {
+    -fx-background-color: #111827;
+}
+
+/* CELL TEXT WHITE */
+.table-cell {
+    -fx-text-fill: #E5E7EB;
+    -fx-font-size: 13px;
+}
+
+/* HOVER */
+.table-row-cell:hover {
+    -fx-background-color: #1E3A8A;
+}
+
+/* SELECTED */
+.table-row-cell:selected {
+    -fx-background-color: #2563EB;
+}
+.table-row-cell:selected .text {
+    -fx-fill: white;
+}
+
+
+/* ================= BUTTON ================= */
+.button {
+    -fx-background-color: #1F2937;
+    -fx-border-color: #374151;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+
+    -fx-text-fill: #E5E7EB;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2563EB;
+}
+
+.button:pressed {
+    -fx-background-color: #1D4ED8;
+}
+
+/* ================= SPECIAL BUTTONS ================= */
+#bt_delete, #bt_select {
+    -fx-background-color: #DC2626;
+}
+#bt_delete:hover, #bt_select:hover {
+    -fx-background-color: #B91C1C;
+}
+
+#bt_print {
+    -fx-background-color: #16A34A;
+}
+#bt_print:hover {
+    -fx-background-color: #15803D;
+}
+
+#bt_clean {
+    -fx-background-color: #F59E0B;
+}
+#bt_clean:hover {
+    -fx-background-color: #D97706;
+}
+
+#bt_Black {
+    -fx-background-color: #000000;
+}
+#bt_Black:hover {
+    -fx-background-color: #111827;
+}
+
+#bt_home {
+    -fx-background-color: #6B7280;
+}
+#bt_home:hover {
+    -fx-background-color: #4B5563;
+}
+
+/* ================= RIGHT PANEL ================= */
+#anchor_center {
+     -fx-background-color:#ccccff;   
+    -fx-border-color: #334155;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+}

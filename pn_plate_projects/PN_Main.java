@@ -17,7 +17,7 @@ public class PN_Main extends Application{
     public void start(Stage stage) throws Exception {
         
         
-        Parent root = FXMLLoader.load(getClass().getResource("Admin_intro_paxge.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Intro_Video.fxml"));
         
         Scene scene = new Scene(root);
                 

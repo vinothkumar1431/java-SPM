@@ -7,6 +7,10 @@ package pn_plate_projects;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -42,6 +46,7 @@ public class PNController implements Initializable {
     @FXML
     private Button bt_Sign;
 
+    
     /**
      * Initializes the controller class.
      */
@@ -65,18 +70,10 @@ public class PNController implements Initializable {
      String name = txt_uname.getText();
      String pass = pwd_pass.getText();
      
-     Demo_pojo demo = new Demo_pojo();
      
-     String username = demo.getUsername();
-     String userpass = demo.getUserpass();
+        blackList(name, pass);
      
-     PN_Dao obj = new PN_Dao();
      
-     PN_Pojo pojo = obj.login(name, pass);   
-        
-     String user=pojo.getUname();
-     String passs=pojo.getPass();
-        
      
      
         //System.out.println(username+","+userpass);
@@ -85,15 +82,16 @@ public class PNController implements Initializable {
     }
 
     @FXML
-    private void Sign(ActionEvent event) throws IOException {
+    private void Sign(ActionEvent event) throws Exception {
         
-      Parent root = FXMLLoader.load(getClass().getResource("Register.fxml"));
         
-      Scene scene = new Scene(root);
+        Parent root = FXMLLoader.load(getClass().getResource("Register.fxml"));
         
-      PN_Main.stage.setScene(scene);
+        Scene scene = new Scene(root);
         
-      PN_Main. stage.show();  
+        PN_Main.stage.setScene(scene);
+        
+        PN_Main. stage.show(); 
     }
     
     public void cleaData(){
@@ -104,7 +102,7 @@ public class PNController implements Initializable {
    
         
     }
-    public void  nextPage() throws IOException{
+    public void  nextPage() throws Exception{
     
       Parent root = FXMLLoader.load(getClass().getResource("Billing.fxml"));
         
@@ -236,6 +234,105 @@ public class PNController implements Initializable {
       }
 */       
 }   
+ 
+ public void blackList(String username, String password) throws Exception {
+
+    Class.forName(PN_Dao_Paroperty.driver);
+
+    try (Connection con = DriverManager.getConnection(
+            PN_Dao_Paroperty.url + PN_Dao_Paroperty.db,
+            PN_Dao_Paroperty.user,
+            PN_Dao_Paroperty.pass);
+
+         PreparedStatement ps = con.prepareStatement( "SELECT username, password FROM id_black WHERE username=? AND password=?")) {
+
+        ps.setString(1, username);
+        ps.setString(2, password);
+
+        ResultSet rs = ps.executeQuery();
+      
+        String uname = "";
+         String pass = "";
+         
+        while(rs.next()) {
+
+             uname = rs.getString("username");
+             pass = rs.getString("password");
+
+           
+        } 
+        
+        if(username.equals(uname)){
+        
+         username();   
+       }
+        else if(password.equals(pass)){
+         
+           password();  
+         }
+        else{
+            PN_Dao obj = new PN_Dao();
+            obj.login(username, password);
+
+            PN_Pojo pojo = new PN_Pojo();
+            pojo.setUname(username);
+            pojo.setPass(password);
+
+                
+                }
+
+    }
+ }
+
+ public void username() throws Exception{
+
+    Alert alert = new Alert(Alert.AlertType.ERROR);
+alert.setTitle("UserName Alert!");
+alert.setContentText("Your UserName Block");
+
+alert.getDialogPane().setStyle(
+        
+"-fx-background-color: linear-gradient(to bottom, #0078D7, #005A9E);" +  // Gradient blue
+"-fx-text-fill: white;" +
+"-fx-font-weight: bold;" +
+"-fx-font-size: 15px;" +
+"-fx-font-family: 'Segoe UI Semibold';" +  // Professional system font
+"-fx-background-radius: 8;" +
+"-fx-padding: 8 18 8 18;" +
+"-fx-cursor: hand;" +
+"-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 3, 0, 0, 1);" +
+"-fx-border-color: transparent;" +
+"-fx-border-radius: 8;"      
+  
+);
+alert.showAndWait();
+ 
+}
+
+public void password() throws Exception{
+
+    Alert alert = new Alert(Alert.AlertType.ERROR);
+alert.setTitle("UserName Alert!");
+alert.setContentText("Your UserName Block");
+
+alert.getDialogPane().setStyle(
+        
+"-fx-background-color: linear-gradient(to bottom, #0078D7, #005A9E);" +  // Gradient blue
+"-fx-text-fill: white;" +
+"-fx-font-weight: bold;" +
+"-fx-font-size: 15px;" +
+"-fx-font-family: 'Segoe UI Semibold';" +  // Professional system font
+"-fx-background-radius: 8;" +
+"-fx-padding: 8 18 8 18;" +
+"-fx-cursor: hand;" +
+"-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 3, 0, 0, 1);" +
+"-fx-border-color: transparent;" +
+"-fx-border-radius: 8;"      
+  
+);
+alert.showAndWait();
+ 
+}
  
 }
 

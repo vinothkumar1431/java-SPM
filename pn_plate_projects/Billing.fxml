@@ -3,8 +3,7 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -35,109 +34,16 @@
                   <Font name="Sylfaen" size="20.0" />
                </font>
             </Label>
-            <SplitMenuButton fx:id="view_product" layoutX="39.0" layoutY="40.0" mnemonicParsing="false" onAction="#product1" prefHeight="42.0" prefWidth="350.0" text="Youer Choose....">
-              <items>
-                <MenuItem fx:id="menu_plate" mnemonicParsing="false" onAction="#plate" text="Plate" />
-                <MenuItem fx:id="menu_cup" mnemonicParsing="false" onAction="#cup" text="Cups" />
-                  <MenuItem fx:id="menu_bowls" mnemonicParsing="false" onAction="#bowls" text="Bowls" />
-                  <MenuItem fx:id="menu_container" mnemonicParsing="false" onAction="#container" text="Container" />
-                  <MenuItem fx:id="menu_trays" mnemonicParsing="false" onAction="#trays" text="Trays" />
-                  <MenuItem fx:id="menu_box" mnemonicParsing="false" onAction="#box" text="Box" />
-                  <MenuItem fx:id="menu_spoon" mnemonicParsing="false" onAction="#spoon" text="Spoon" />
-                  <MenuItem fx:id="menu_straws" mnemonicParsing="false" onAction="#straws" text="Straws" />
-                  <MenuItem fx:id="menu_glass" mnemonicParsing="false" onAction="#glass" text="Glass" />
-              </items>
-            </SplitMenuButton>
             <Label layoutX="38.0" layoutY="100.0" text="Product Name">
                <font>
                   <Font name="Sylfaen" size="20.0" />
                </font>
             </Label>
-            <SplitMenuButton fx:id="view_productname" layoutX="38.0" layoutY="126.0" mnemonicParsing="false" onAction="#productname" prefHeight="42.0" prefWidth="350.0" text="Youer Choose....">
-              <items>
-                <MenuItem fx:id="menu_plainsuper" mnemonicParsing="false" onAction="#plainsuper" text="Plain Super Plate" />
-                <MenuItem fx:id="menu_plainpizza" mnemonicParsing="false" onAction="#plainpizza" text="Plain Super pizza plate" />
-                  <MenuItem fx:id="menu_squareplain" mnemonicParsing="false" onAction="#squareplain" text="Square plain plate" />
-                  <MenuItem fx:id="menu_square" mnemonicParsing="false" onAction="#square" text="Square plate" />
-                  <MenuItem fx:id="menu_roundcup" mnemonicParsing="false" onAction="#roundcup" text="Round cup plate" />
-                  <MenuItem fx:id="menu_squarecup" mnemonicParsing="false" onAction="#squarecup" text="Square cup plate" />
-                  <MenuItem fx:id="menu_roundcupsuper" mnemonicParsing="false" onAction="#roundcupsuper" text="Round cup super plate" />
-                  <MenuItem fx:id="menu_squarecupsuper" mnemonicParsing="false" onAction="#squarecupsuper" text="Square cup super plate" />
-                  <MenuItem fx:id="menu_classibio" mnemonicParsing="false" onAction="#classibio" text="Classibio" />
-                  <MenuItem fx:id="menu_tea" mnemonicParsing="false" onAction="#tea" text="Tea" />
-                  <MenuItem fx:id="menu_clamshell" mnemonicParsing="false" onAction="#clamshell" text="clamshell" />
-                  <MenuItem fx:id="menu_wooden" mnemonicParsing="false" onAction="#wooden" text="wooden" />
-                  <MenuItem fx:id="menu_round3cup" mnemonicParsing="false" onAction="#round3cup" text="Round 3cup plate" />
-                  <MenuItem fx:id="menu_square3cup" mnemonicParsing="false" onAction="#square3cup" text="Square 3cup plate" />
-                  <MenuItem fx:id="menu_square4cup" mnemonicParsing="false" onAction="#square4cup" text="Square 4cup plate" />
-                  <MenuItem fx:id="menu_round4cup" mnemonicParsing="false" onAction="#reound4cup" text="Round 4cup plate" />
-                  <MenuItem fx:id="menu_roundplain3cup" mnemonicParsing="false" onAction="#roundplain3cup" text="Round plain 3cup plate" />
-                  <MenuItem fx:id="menu_roundplain4cup" mnemonicParsing="false" onAction="#reoundplain4cup" text="Round plain 4cup plate" />
-                  <MenuItem fx:id="menu_squareplain3cup" mnemonicParsing="false" onAction="#squareplain3cup" text="Square plain 3cup plate" />
-                  <MenuItem fx:id="menu_squareplain4cup" mnemonicParsing="false" onAction="#squareplain4cup" text="Square plain 4cup plate" />
-                  <MenuItem fx:id="menu_lid" mnemonicParsing="false" onAction="#lid" text="Lid" />
-                  <MenuItem fx:id="menu_3cup" mnemonicParsing="false" onAction="#cup3" text="3Cup" />
-                  <MenuItem fx:id="menu_4cup" mnemonicParsing="false" onAction="#cup4" text="4Cup" />
-                  <MenuItem fx:id="menu_5cup" mnemonicParsing="false" onAction="#cup5" text="5Cup" />
-                  <MenuItem fx:id="menu_8cup" mnemonicParsing="false" onAction="#cup8" text="8Cup" />
-              </items>
-            </SplitMenuButton>
             <Label layoutX="39.0" layoutY="195.0" text="Product Size">
                <font>
                   <Font name="Sylfaen" size="20.0" />
                </font>
             </Label>
-            <SplitMenuButton fx:id="view_productsize" layoutX="38.0" layoutY="221.0" mnemonicParsing="false" onAction="#productsize" prefHeight="42.0" prefWidth="350.0" text="Youer Choose....">
-               <items>
-                  <MenuItem fx:id="menu_12inch" mnemonicParsing="false" onAction="#inch12" text="12Inch" />
-                  <MenuItem fx:id="menu_12inchxl" mnemonicParsing="false" onAction="#xl12inch" text="12Inch XL" />
-                  <MenuItem fx:id="menu_10inch" mnemonicParsing="false" onAction="#inch10" text="10Inch" />
-                  <MenuItem fx:id="menu_9inch" mnemonicParsing="false" onAction="#inch9" text="9Inch" />
-                  <MenuItem fx:id="menu_7inch" mnemonicParsing="false" onAction="#inch7" text="7Inch" />
-                  <MenuItem fx:id="menu_6inch" mnemonicParsing="false" onAction="#inch6" text="6Inch" />
-                  <MenuItem fx:id="menu_5inch" mnemonicParsing="false" onAction="#inch5" text="5Inch" />
-                  <MenuItem fx:id="menu_4inch" mnemonicParsing="false" onAction="#inch4" text="4Inch" />
-                  <MenuItem fx:id="menu_480ml" mnemonicParsing="false" onAction="#ml480" text="480ML" />
-                  <MenuItem fx:id="menu_360ml" mnemonicParsing="false" onAction="#ml360" text="360ML" />
-                  <MenuItem fx:id="menu_340ml" mnemonicParsing="false" onAction="#ml340" text="340ML" />
-                  <MenuItem fx:id="menu_240ml" mnemonicParsing="false" onAction="#ml240" text="240ML" />
-                  <MenuItem fx:id="menu_210ml" mnemonicParsing="false" onAction="#ml210" text="210ML" />
-                  <MenuItem fx:id="menu_180ml" mnemonicParsing="false" onAction="#ml180" text="180ML" />
-                  <MenuItem fx:id="menu_150ml" mnemonicParsing="false" onAction="#ml150" text="150ML" />
-                  <MenuItem fx:id="menu_120ml" mnemonicParsing="false" onAction="#ml120" text="120ML" />
-                  <MenuItem fx:id="menu_110ml" mnemonicParsing="false" onAction="#ml110" text="110ML" />
-                  <MenuItem fx:id="menu_90ml" mnemonicParsing="false" onAction="#ml90" text="90ML" />
-                  <MenuItem fx:id="menu_60ml" mnemonicParsing="false" onAction="#ml60" text="60ML" />
-                  <MenuItem fx:id="menu_55ml" mnemonicParsing="false" onAction="#ml55" text="55ML" />
-                  <MenuItem fx:id="menu_30ml" mnemonicParsing="false" onAction="#ml30" text="30ML" />
-                  <MenuItem fx:id="menu_500ml" mnemonicParsing="false" onAction="#ml500" text="500ML" />
-                  <MenuItem fx:id="menu_750ml" mnemonicParsing="false" onAction="#ml750" text="750ML" />
-                  <MenuItem fx:id="menu_b2b" mnemonicParsing="false" onAction="#b2b" text="B2B" />
-                  <MenuItem fx:id="menu_1d" mnemonicParsing="false" onAction="#d1" text="1D" />
-                  <MenuItem fx:id="menu_2d" mnemonicParsing="false" onAction="#d2" text="2D" />
-                  <MenuItem fx:id="menu_3d" mnemonicParsing="false" onAction="#d3" text="3D" />
-                  <MenuItem fx:id="menu_5d" mnemonicParsing="false" onAction="#d5" text="4D" />
-                  <MenuItem fx:id="menu_size66" mnemonicParsing="false" onAction="#size66" text="6*6" />
-                  <MenuItem fx:id="menu_size96" mnemonicParsing="false" onAction="#size96" text="9*6" />
-                  <MenuItem fx:id="menu_size99" mnemonicParsing="false" onAction="#size99" text="9*9" />
-                  <MenuItem fx:id="menu_size993" mnemonicParsing="false" onAction="#size993" text="9*9*3" />
-                  <MenuItem fx:id="menu_smart" mnemonicParsing="false" onAction="#smart" text="Smart" />
-                  <MenuItem fx:id="menu_300ml" mnemonicParsing="false" onAction="#ml3000" text="300ML" />
-                  <MenuItem fx:id="menu_size883" mnemonicParsing="false" onAction="#size883" text="8*8*3" />
-                  <MenuItem fx:id="menu_2cup" mnemonicParsing="false" onAction="#cup2" text="2Cup" />
-                  <MenuItem fx:id="menu_80mm" mnemonicParsing="false" onAction="#mm80" text="80MM" />
-                  <MenuItem fx:id="menu_90mm" mnemonicParsing="false" onAction="#mm90" text="90MM" />
-                  <MenuItem fx:id="menu_normelspoon" mnemonicParsing="false" onAction="#normelspoon" text="Normel spoon" />
-                  <MenuItem fx:id="menu_fork" mnemonicParsing="false" onAction="#fork" text="Fork" />
-                  <MenuItem fx:id="menu_knife" mnemonicParsing="false" onAction="#knife" text="Knife" />
-                  <MenuItem fx:id="menu_55mm210mm" mnemonicParsing="false" onAction="#mm55mm210" text="5.5mm&amp;210mm" />
-                  <MenuItem fx:id="menu_7mm210mm" mnemonicParsing="false" onAction="#mm7mm210" text="7mm&amp;210mm" />
-                  <MenuItem fx:id="menu_10mm210mm" mnemonicParsing="false" onAction="#mm10mm210" text="10mm&amp;210mm" />
-                  <MenuItem fx:id="menu_7mm230mm" mnemonicParsing="false" onAction="#mm7mm230" text="7mm&amp;230mm" />
-                  <MenuItem fx:id="menu_14cms16cms" mnemonicParsing="false" onAction="#cms14cms16" text="14cms&amp;16cms" />
-                  <MenuItem fx:id="menu_11cm" mnemonicParsing="false" onAction="#cm11" text="11cm" />
-               </items>
-            </SplitMenuButton>
             <Label layoutX="35.0" layoutY="285.0" text="Quantity">
                <font>
                   <Font name="Sylfaen" size="20.0" />
@@ -191,6 +97,9 @@
                </font>
             </Label>
             <TextField fx:id="txt_contact" layoutX="43.0" layoutY="585.0" onAction="#contact" prefHeight="42.0" prefWidth="350.0" />
+            <MenuButton fx:id="menu_product" layoutX="35.0" layoutY="40.0" onAction="#ProductName" prefHeight="42.0" prefWidth="350.0" text="Youer Choose...." />
+            <MenuButton fx:id="menu_model" layoutX="35.0" layoutY="126.0" onAction="#productModel" prefHeight="42.0" prefWidth="350.0" text="Youer Choose...." />
+            <MenuButton fx:id="menu_size" layoutX="35.0" layoutY="221.0" onAction="#ProductSize" prefHeight="42.0" prefWidth="350.0" text="Youer Choose...." />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="anchor_top" layoutX="34.0" layoutY="87.0" prefHeight="104.0" prefWidth="1363.0">
@@ -257,6 +166,10 @@
             <Font name="Bodoni MT" size="25.0" />
          </font>
       </Label>
+      <Button fx:id="bu_home" layoutX="34.0" layoutY="50.0" mnemonicParsing="false" onAction="#home" text="Home" />
+      <Button fx:id="bu_view" layoutX="161.0" layoutY="50.0" mnemonicParsing="false" onAction="#view" text="View" />
+      <Button fx:id="bu_edit" layoutX="103.0" layoutY="50.0" mnemonicParsing="false" onAction="#edit" text="Edit" />
+      <Button fx:id="bu_exit" layoutX="222.0" layoutY="50.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
    </children>
    <stylesheets>
       <URL value="@Bills.css" />

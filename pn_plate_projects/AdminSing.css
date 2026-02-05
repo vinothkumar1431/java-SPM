@@ -1,0 +1,68 @@
+/* ===== ROOT ===== */
+#Ang_admin_sing {
+    -fx-background-color: linear-gradient(to bottom right, #f8fafc, #eef2f7);
+}
+
+/* ===== MAIN TITLE ===== */
+#labele_admin {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 72px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}
+
+/* ===== ALL LABELS ===== */
+#labele_admin {
+    -fx-font-family: "Arvo";
+    -fx-font-size: 72px;
+    -fx-font-weight: bold;
+}
+
+/* ===== TEXTFIELDS & PASSWORD FIELDS ===== */
+.text-field,
+.password-field {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 16px;
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8 12;
+}
+
+/* Focus effect */
+.text-field:focused,
+.password-field:focused {
+    -fx-border-color: #2563eb;
+    -fx-border-width: 2;
+}
+
+/* ===== BUTTON COMMON ===== */
+.button {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+/* ===== SAVE BUTTON ===== */
+#bt_save {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+}
+
+#bt_save:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+/* ===== BACK BUTTON ===== */
+#bt_back {
+    -fx-background-color: #64748b;
+    -fx-text-fill: white;
+}
+
+#bt_back:hover {
+    -fx-background-color: #475569;
+}
+

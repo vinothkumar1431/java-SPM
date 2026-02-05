@@ -1,0 +1,77 @@
+/* ===== ROOT / ANCHORPANE ===== */
+#anchorpane_billdelete {
+    -fx-background-color:lightblue;
+}
+
+/* ===== TITLE LABEL ===== */
+.label {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian,
+            rgba(0,0,0,0.5),
+            10, 0.3, 2, 2);
+}
+
+/* ===== TABLE VIEW ===== */
+.table-view {
+    -fx-background-color:lightgoldenrodyellow;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: rgba(255,255,255,0.3);
+    -fx-border-width: 1;
+    -fx-text-fill: #000000;
+    
+}
+
+/* header */
+.table-view .column-header-background {
+    -fx-background-color: rgba(255,255,255,0.25);
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* rows */
+.table-row-cell {
+    -fx-background-color: rgba(255,255,255,0.08);
+    -fx-text-fill: white;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(255,255,255,0.35);
+}
+
+/* ===== HOME BUTTON – GLASS EFFECT ===== */
+#bt_home {
+    -fx-background-color: rgba(255,255,255,0.25);
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+
+    -fx-border-color: rgba(255,255,255,0.4);
+    -fx-border-width: 1;
+
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-effect: dropshadow(gaussian,
+            rgba(0,0,0,0.3),
+            15, 0.3, 0, 4);
+}
+
+/* hover */
+#bt_home:hover {
+    -fx-background-color: rgba(255,255,255,0.35);
+    -fx-cursor: hand;
+}
+
+/* pressed */
+#bt_home:pressed {
+    -fx-background-color: rgba(255,255,255,0.5);
+}

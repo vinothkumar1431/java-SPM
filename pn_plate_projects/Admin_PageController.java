@@ -76,15 +76,18 @@ public class Admin_PageController implements Initializable {
       
      Admin_Page_Dao obj = new Admin_Page_Dao();
      
-     obj.Admin_Login(name, pass, admin);
+    // obj.Admin_Login(name, pass, admin);
      
+      Admin_intro_pageController on = new Admin_intro_pageController();
+      
+      on.NO();
       
     }
 
     @FXML
     private void sing(ActionEvent event) throws IOException{
         
-     Parent root = FXMLLoader.load(getClass().getResource("Admin_Sing.fxml"));
+     Parent root = FXMLLoader.load(getClass().getResource("Admin_mobile_login.fxml"));
         
       Scene scene = new Scene(root);
         
